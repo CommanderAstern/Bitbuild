@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e257d130f47ae7b479953871aa021a19, type: 3}
+  m_Name: FlowControlData
+  m_EditorClassIdentifier: 
+  _emulatorSettings:
+    emulatorDataDirectory: C:/Users/asimj/Documents/flowtopia/Assets/Scripts/Cadence
+    flowExecutablePathOverride: 
+    runEmulatorInPlayMode: 1
+    persistData: 1
+    killOtherFlow: 1
+    verbose: 1
+    emulatorEndpoint: http://127.0.0.1:8888/v1
+  _textReplacements:
+  - description: 
+    originalText: 
+    replacementText: 
+    active: 0
+    _applyToAccounts: []
+    _applyToGateways: []
+  _accounts:
+  - _name: emulator_service_account
+    infoKeys:
+    - Private Key
+    - Address
+    - Protocol
+    infoValues:
+    - 2177ec179db199035ac3708fcc0d105edfc3e0d7bdaeee6602bcc29ccf80c1b8
+    - 0xf8d6e0586b0a20c7
+    - gRPC
+    _gatewayName: Emulator
+  - _name: testDev1
+    infoKeys:
+    - Address
+    - Private Key
+    infoValues:
+    - 0x7aca06615b36070f
+    - 0c60c8c86bcfc77ebff13cb4f8e05e71c689152d6d455a38f624a11671c5b208
+    _gatewayName: Emulator
+  - _name: testDev2
+    infoKeys:
+    - Address
+    - Private Key
+    infoValues:
+    - 0x62214887e8f621dd
+    - '236f7e043a5a7684b70b6213908471b64684eaf1a8bc67b108f7eff21c127cba '
+    _gatewayName: Emulator
+  - _name: testDev3
+    infoKeys:
+    - Address
+    - Private Key
+    infoValues:
+    - 0xf783b6d5f524a440
+    - 22b0539ee881e1293c7e1d951ed8b0c8afdacbb536bdfed21bd534fc3f1ac3a8
+    _gatewayName: Emulator
