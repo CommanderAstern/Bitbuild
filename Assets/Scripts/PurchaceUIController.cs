@@ -2,10 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
-using DapperLabs.Flow.Sdk;
-using DapperLabs.Flow.Sdk.DataObjects;
-using DapperLabs.Flow.Sdk.Cadence;
-using DapperLabs.Flow.Sdk.DevWallet;
 
 public class PurchaceUIController : MonoBehaviour
 {
@@ -129,32 +125,15 @@ public class PurchaceUIController : MonoBehaviour
 
 
 
-    public async void getOwned()
+    public void getOwned()
     {
-        string script = @"
-import BasicInventoryV3 from 0x91c7fd71eaa35f2f
-pub fun main(): [Bool] {
-  return BasicInventoryV3.getItemsList(_address: "+address+@");
-}
-        ";
-        FlowScriptRequest scriptReq = new FlowScriptRequest
-        {
-            Script = script
-        };
 
-        FlowScriptResponse response = await Scripts.ExecuteAtLatestBlock(scriptReq);
-
-        // The script returns an array of ids, so convert the return value to an array. 
-        CadenceArray responseVal = (CadenceArray)response.Value;
-
-        string resultText = $"Account {address} NFTs:\n";
-
+        int[] responseVal = {1,0,0,0,1};
         // Iterate the array of UInt64 values
         int i = 1;
-        foreach (CadenceBase value in responseVal.Value)
+        foreach (int value in responseVal)
         {
-            CadenceBool nftId = (CadenceBool)value;
-            if (nftId.Value == true)
+            if (value == 1)
             {
                 root.Q<VisualElement>("select"+i.ToString()).style.display = DisplayStyle.Flex;
             }
@@ -164,27 +143,12 @@ pub fun main(): [Bool] {
             }
             i++;
         }
-        Debug.Log(resultText);
-
     }
-    private async void getInfo()
+    private void getInfo()
     {
-        //get playername
-        string script = @"
-import BasicInventoryV3 from 0x91c7fd71eaa35f2f
-pub fun main(): Bool {
-  return BasicInventoryV3.inDatabase(_address: "+address+@");
-}
- ";
-        FlowScriptRequest scriptReq = new FlowScriptRequest
-        {
-            Script = script
-        };
+        bool response = true;
 
-        FlowScriptResponse response = await Scripts.ExecuteAtLatestBlock(scriptReq);
-
-        CadenceBool responseStr = (CadenceBool)response.Value;
-        if(responseStr.Value == false)
+        if(response == false)
         {
             root.Q<VisualElement>("createContainer").style.display = DisplayStyle.Flex;
             root.Q<VisualElement>("authorizedContainer").style.display = DisplayStyle.None;
@@ -198,55 +162,22 @@ pub fun main(): Bool {
             
     }
 
-    private async void CreateButtonPressed()
+    private void CreateButtonPressed()
     {
-            string script = @"
-import BasicInventoryV3 from 0x91c7fd71eaa35f2f
-transaction {
-  prepare(acct: AuthAccount) {}
-  execute {
-    log(BasicInventoryV3.initializeAccount(_address:"+address+@"))
-  }
-}
-";
 
-        // Using the same account as proposer, payer and authorizer. 
-        FlowTransactionResponse response = await Transactions.Submit(script);
+
         root.Q<VisualElement>("createContainer").style.display = DisplayStyle.Flex;
-        if (response.Error != null)
-        {
-            Debug.LogError(response.Error.Message);
-            return;
-        }
         getInfo();
     }
 
-    private async void getInitialInventory()
+    private void getInitialInventory()
     {
-        string script = @"
-import BasicInventoryV3 from 0x91c7fd71eaa35f2f
-pub fun main(): [Bool] {
-  return BasicInventoryV3.getItemsList(_address: "+address+@");
-}
-        ";
-        FlowScriptRequest scriptReq = new FlowScriptRequest
-        {
-            Script = script
-        };
-
-        FlowScriptResponse response = await Scripts.ExecuteAtLatestBlock(scriptReq);
-
-        // The script returns an array of ids, so convert the return value to an array. 
-        CadenceArray responseVal = (CadenceArray)response.Value;
-
-        string resultText = $"Account {address} NFTs:\n";
-
+        int[] responseVal = {1,0,0,0,1};
         // Iterate the array of UInt64 values
         int i = 1;
-        foreach (CadenceBase value in responseVal.Value)
+        foreach (int value in responseVal)
         {
-            CadenceBool nftId = (CadenceBool)value;
-            if (nftId.Value == false)
+            if (value == 1)
             {
                 root.Q<VisualElement>("buy"+i.ToString()).style.display = DisplayStyle.Flex;
             }
@@ -256,126 +187,27 @@ pub fun main(): [Bool] {
             }
             i++;
         }
-        Debug.Log(resultText);
-
     }
 
-    private async void Buy1ButtonPressed()
+    private void Buy1ButtonPressed()
     {
-        string script = @"
-import BasicInventoryV3 from 0x91c7fd71eaa35f2f
-
-transaction {
-
-  prepare(acct: AuthAccount) {}
-
-  execute {
-    log(BasicInventoryV3.enableOwnership(_address:"+address+@", _itemID: 0))
-  }
-}
-
-";
-
-        // Using the same account as proposer, payer and authorizer. 
-        FlowTransactionResponse response = await Transactions.Submit(script);
-        if (response.Error != null)
-        {
-            Debug.LogError(response.Error.Message);
-            return;
-        }
+      Debug.Log("buy1");
     }
 
-    private async void Buy2ButtonPressed()
+    private void Buy2ButtonPressed()
     {
-        string script = @"
-import BasicInventoryV3 from 0x91c7fd71eaa35f2f
-
-transaction {
-
-  prepare(acct: AuthAccount) {}
-
-  execute {
-    log(BasicInventoryV3.enableOwnership(_address:"+address+@", _itemID: 1))
-  }
-}
-
-";
-
-        // Using the same account as proposer, payer and authorizer. 
-        FlowTransactionResponse response = await Transactions.Submit(script);
-        if (response.Error != null)
-        {
-            Debug.LogError(response.Error.Message);
-            return;
-        }
-    }    private async void Buy3ButtonPressed()
+      Debug.Log("buy2");
+    }
+    private void Buy3ButtonPressed()
     {
-        string script = @"
-import BasicInventoryV3 from 0x91c7fd71eaa35f2f
-
-transaction {
-
-  prepare(acct: AuthAccount) {}
-
-  execute {
-    log(BasicInventoryV3.enableOwnership(_address:"+address+@", _itemID: 2))
-  }
-}
-
-";
-
-        // Using the same account as proposer, payer and authorizer. 
-        FlowTransactionResponse response = await Transactions.Submit(script);
-        if (response.Error != null)
-        {
-            Debug.LogError(response.Error.Message);
-            return;
-        }
-    }    private async void Buy4ButtonPressed()
+      Debug.Log("buy3");
+    }    
+    private async void Buy4ButtonPressed()
     {
-        string script = @"
-import BasicInventoryV3 from 0x91c7fd71eaa35f2f
-
-transaction {
-
-  prepare(acct: AuthAccount) {}
-
-  execute {
-    log(BasicInventoryV3.enableOwnership(_address:"+address+@", _itemID: 3))
-  }
-}
-
-";
-
-        // Using the same account as proposer, payer and authorizer. 
-        FlowTransactionResponse response = await Transactions.Submit(script);
-        if (response.Error != null)
-        {
-            Debug.LogError(response.Error.Message);
-            return;
-        }
-    }    private async void Buy5ButtonPressed()
+      Debug.Log("buy4");
+    }    
+    private async void Buy5ButtonPressed()
     {
-        string script = @"
-import BasicInventoryV3 from 0x91c7fd71eaa35f2f
-
-transaction {
-
-  prepare(acct: AuthAccount) {}
-
-  execute {
-    log(BasicInventoryV3.enableOwnership(_address:"+address+@", _itemID: 4))
-  }
-}
-
-";
-
-        // Using the same account as proposer, payer and authorizer. 
-        FlowTransactionResponse response = await Transactions.Submit(script);
-        if (response.Error != null)
-        {
-            Debug.LogError(response.Error.Message);
-            return;
-        }
+      Debug.Log("buy5");
     }
 }
