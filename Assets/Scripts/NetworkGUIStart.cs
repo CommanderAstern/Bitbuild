@@ -1,8 +1,6 @@
 // vis2k: GUILayout instead of spacey += ...; removed Update hotkeys to avoid
 // confusion if someone accidentally presses one.
 using UnityEngine;
-using DapperLabs.Flow.Sdk;
-using DapperLabs.Flow.Sdk.DevWallet;
 
 namespace Mirror
 {
@@ -22,12 +20,12 @@ namespace Mirror
         void Awake()
         {
             manager = GetComponent<NetworkManager>();
-            FlowConfig flowConfig = new FlowConfig();
-            flowConfig.NetworkUrl = "https://rest-testnet.onflow.org/v1";
+            // FlowConfig flowConfig = new FlowConfig();
+            // flowConfig.NetworkUrl = "https://rest-testnet.onflow.org/v1";
 
-            flowConfig.Protocol = FlowConfig.NetworkProtocol.HTTP;
-            FlowSDK.Init(flowConfig);
-            FlowSDK.RegisterWalletProvider(ScriptableObject.CreateInstance<DevWalletProvider>());
+            // flowConfig.Protocol = FlowConfig.NetworkProtocol.HTTP;
+            // FlowSDK.Init(flowConfig);
+            // FlowSDK.RegisterWalletProvider(ScriptableObject.CreateInstance<DevWalletProvider>());
 
             string[] args = System.Environment.GetCommandLineArgs();
             for(int i = 0; i < args.Length; i++)
@@ -90,14 +88,15 @@ namespace Mirror
                 {
                     if (GUILayout.Button("Host (Server + Client)",buttonStyle))
                     {
-                        FlowSDK.GetWalletProvider().Authenticate("", (string authAccount) =>
-                        {
-                            Debug.Log($"Authenticated: {authAccount}");
-                            manager.StartHost();
-                        }, () =>
-                        {
-                            Debug.Log("Authentication failed, aborting transaction.");
-                        });
+                        manager.StartHost();
+                        // FlowSDK.GetWalletProvider().Authenticate("", (string authAccount) =>
+                        // {
+                        //     Debug.Log($"Authenticated: {authAccount}");
+                        //     manager.StartHost();
+                        // }, () =>
+                        // {
+                        //     Debug.Log("Authentication failed, aborting transaction.");
+                        // });
                     }
                 }
 
@@ -105,14 +104,15 @@ namespace Mirror
                 GUILayout.BeginHorizontal();
                 if (GUILayout.Button("Client",buttonStyle))
                 {
-                    FlowSDK.GetWalletProvider().Authenticate("", (string authAccount) =>
-                    {
-                        Debug.Log($"Authenticated: {authAccount}");
-                        manager.StartClient();
-                    }, () =>
-                    {
-                        Debug.Log("Authentication failed, aborting transaction.");
-                    });
+                    manager.StartClient();
+                    // FlowSDK.GetWalletProvider().Authenticate("", (string authAccount) =>
+                    // {
+                    //     Debug.Log($"Authenticated: {authAccount}");
+                    //     manager.StartClient();
+                    // }, () =>
+                    // {
+                    //     Debug.Log("Authentication failed, aborting transaction.");
+                    // });
                     
                 }
                 // This updates networkAddress every frame from the TextField

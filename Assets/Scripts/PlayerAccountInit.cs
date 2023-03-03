@@ -1,7 +1,6 @@
 using UnityEngine;
 using TMPro;
 using Mirror;
-using DapperLabs.Flow.Sdk;
 
 public class PlayerAccountInit : NetworkBehaviour
 {
@@ -9,19 +8,18 @@ public class PlayerAccountInit : NetworkBehaviour
     public string playerName;
 
     [SyncVar]
-    SdkAccount authorizedAccount;
+    string authorizedAccount;
 
     [SerializeField]
     private TMP_Text nameText;
 
     public override void OnStartLocalPlayer()
     {
-        authorizedAccount = FlowSDK.GetWalletProvider().GetAuthenticatedAccount();
-        playerName = authorizedAccount.Address;
+        playerName = "test101";
         nameText.text = playerName;
         // Call the CmdSetPlayerName function to set the name on the server
         CmdSetPlayerName(playerName);
-        CmdSetPlayerAddress(authorizedAccount);
+        CmdSetPlayerAddress("authorizedAccount");
     }
 
     [Command]
@@ -32,7 +30,7 @@ public class PlayerAccountInit : NetworkBehaviour
     }
 
     [Command]
-    public void CmdSetPlayerAddress(SdkAccount sdkAccount)
+    public void CmdSetPlayerAddress(string sdkAccount)
     {
         // Set the player's name on the server
         authorizedAccount = sdkAccount;
