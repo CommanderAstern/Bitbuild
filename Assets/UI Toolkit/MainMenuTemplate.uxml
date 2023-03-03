@@ -1,11 +1,11 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:VisualElement name="mainContainer" style="flex-grow: 1; align-items: center; justify-content: center;">
-        <ui:VisualElement name="buyGUI" style="width: 70%; align-items: center; justify-content: center; height: 80%; background-color: rgba(255, 255, 255, 0.4); display: none;">
+        <ui:VisualElement name="buyGUI" style="width: 70%; align-items: center; justify-content: center; height: 80%; background-color: rgba(255, 255, 255, 0.4); display: flex;">
             <ui:VisualElement name="createContainer" style="justify-content: center; align-items: center; display: none;">
                 <ui:Label text="No Account Found" display-tooltip-when-elided="true" enable-rich-text="true" name="noAcountLabel" style="font-size: 25%; display: flex;" />
                 <ui:Button text="Create Account" display-tooltip-when-elided="true" enable-rich-text="true" name="createAccount" style="height: 74%; width: 61%; -unity-background-image-tint-color: rgb(41, 30, 30); background-color: rgb(144, 85, 85); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 40px; border-bottom-left-radius: 40px; border-top-right-radius: 40px; border-bottom-right-radius: 40px; color: rgb(255, 255, 255); font-size: 14%; display: flex;" />
             </ui:VisualElement>
-            <ui:VisualElement name="authorizedContainer" style="align-items: center; justify-content: flex-end; display: none; font-size: 10%;">
+            <ui:VisualElement name="authorizedContainer" style="align-items: center; justify-content: flex-end; display: flex; font-size: 10%;">
                 <ui:Label text="Click To Buy" display-tooltip-when-elided="true" name="clickToBuy" style="font-size: 18%;" />
                 <ui:VisualElement name="buyContainer" style="align-items: flex-start; justify-content: flex-end; flex-direction: row;">
                     <ui:Button display-tooltip-when-elided="true" name="buy1" style="background-color: rgba(245, 245, 245, 0.34); background-image: url(&apos;project://database/Assets/Images/1.png?fileID=2800000&amp;guid=bc7d793c822d79d4590c8d263af9c3da&amp;type=3#1&apos;); width: 70px; height: 55px; display: none;" />
