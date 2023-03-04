@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 using Mirror;
-
+using Solana.Unity.SDK;
 public class PlayerAccountInit : NetworkBehaviour
 {
     [SyncVar(hook = nameof(OnNameChanged))]
@@ -15,7 +15,7 @@ public class PlayerAccountInit : NetworkBehaviour
 
     public override void OnStartLocalPlayer()
     {
-        playerName = "test101";
+        playerName = Web3.Instance.Wallet.Account.PublicKey.ToString();
         nameText.text = playerName;
         // Call the CmdSetPlayerName function to set the name on the server
         CmdSetPlayerName(playerName);

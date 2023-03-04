@@ -202,11 +202,11 @@ public class PurchaceUIController : MonoBehaviour
     {
       Debug.Log("buy3");
     }    
-    private async void Buy4ButtonPressed()
+    private void Buy4ButtonPressed()
     {
       Debug.Log("buy4");
     }    
-    private async void Buy5ButtonPressed()
+    private void Buy5ButtonPressed()
     {
       Debug.Log("buy5");
     }
