@@ -16,7 +16,7 @@ namespace Mirror
         public int offsetX;
         public int offsetY;
         public GUIStyle buttonStyle;
-
+        [SerializeField] GameObject wallet  ;
         void Awake()
         {
             manager = GetComponent<NetworkManager>();
@@ -83,52 +83,7 @@ namespace Mirror
         {
             if (!NetworkClient.active)
             {
-                // Server + Client
-                if (Application.platform != RuntimePlatform.WebGLPlayer)
-                {
-                    if (GUILayout.Button("Host (Server + Client)",buttonStyle))
-                    {
-                        manager.StartHost();
-                        // FlowSDK.GetWalletProvider().Authenticate("", (string authAccount) =>
-                        // {
-                        //     Debug.Log($"Authenticated: {authAccount}");
-                        //     manager.StartHost();
-                        // }, () =>
-                        // {
-                        //     Debug.Log("Authentication failed, aborting transaction.");
-                        // });
-                    }
-                }
-
-                // Client + IP
-                GUILayout.BeginHorizontal();
-                if (GUILayout.Button("Client",buttonStyle))
-                {
-                    manager.StartClient();
-                    // FlowSDK.GetWalletProvider().Authenticate("", (string authAccount) =>
-                    // {
-                    //     Debug.Log($"Authenticated: {authAccount}");
-                    //     manager.StartClient();
-                    // }, () =>
-                    // {
-                    //     Debug.Log("Authentication failed, aborting transaction.");
-                    // });
-                    
-                }
-                // This updates networkAddress every frame from the TextField
-                manager.networkAddress = GUILayout.TextField(manager.networkAddress);
-                GUILayout.EndHorizontal();
-
-                // Server Only
-                if (Application.platform == RuntimePlatform.WebGLPlayer)
-                {
-                    // cant be a server in webgl build
-                    GUILayout.Box("(  WebGL cannot be server  )");
-                }
-                else
-                {
-                    if (GUILayout.Button("Server Only",buttonStyle)) manager.StartServer();
-                }
+                
             }
             else
             {
@@ -137,6 +92,7 @@ namespace Mirror
                 if (GUILayout.Button("Cancel Connection Attempt",buttonStyle))
                 {
                     manager.StopClient();
+                    wallet.SetActive(true);
                 }
             }
         }
@@ -172,10 +128,12 @@ namespace Mirror
                 if (GUILayout.Button("Stop Host",buttonStyle))
                 {
                     manager.StopHost();
+                    wallet.SetActive(true);
                 }
                 if (GUILayout.Button("Stop Client",buttonStyle))
                 {
                     manager.StopClient();
+                    wallet.SetActive(true);
                 }
                 GUILayout.EndHorizontal();
             }
@@ -185,6 +143,7 @@ namespace Mirror
                 if (GUILayout.Button("Stop Client",buttonStyle))
                 {
                     manager.StopClient();
+                    wallet.SetActive(true);
                 }
             }
             // stop server if server-only
@@ -193,6 +152,7 @@ namespace Mirror
                 if (GUILayout.Button("Stop Server",buttonStyle))
                 {
                     manager.StopServer();
+                    wallet.SetActive(true);
                 }
             }
         }
