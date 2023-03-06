@@ -9,6 +9,7 @@ TagManager:
   - Interactable
   - UIDocument
   - Hatchange
+  - walletMain
   layers:
   - Default
   - TransparentFX

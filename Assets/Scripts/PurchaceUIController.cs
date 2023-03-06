@@ -1,5 +1,15 @@
-using System.Collections;
+using Solana.Unity.Programs;
+using Solana.Unity.Programs.Models;
+using Solana.Unity.Rpc;
+using Solana.Unity.Rpc.Builders;
+using Solana.Unity.Rpc.Core.Http;
+using Solana.Unity.Rpc.Messages;
+using Solana.Unity.Rpc.Models;
+using Solana.Unity.Wallet;
+using Solana.Unity.SDK;
+using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -24,6 +34,8 @@ public class PurchaceUIController : MonoBehaviour
     public VisualElement buyGUI;
     public VisualElement root;
     public string address;
+
+    private static readonly IRpcClient rpcClient = ClientFactory.GetClient(Cluster.DevNet);
     public void Start()
     {
         //get gameObject by tag only one
@@ -189,8 +201,12 @@ public class PurchaceUIController : MonoBehaviour
         }
     }
 
-    private void Buy1ButtonPressed()
+    private async void Buy1ButtonPressed()
     {
+      Account user = Web3.Instance.Wallet.Account;
+
+      RequestResult<ResponseValue<BlockHash>> blockHash = await rpcClient.GetRecentBlockHashAsync();
+      ulong minBalanceForExemptionAcc = (await rpcClient.GetMinimumBalanceForRentExemptionAsync(TokenProgram.TokenAccountDataSize)).Result;
       Debug.Log("buy1");
     }
 
