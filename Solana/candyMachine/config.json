@@ -1,0 +1,31 @@
+{
+  "number": 10,
+  "symbol": "BB",
+  "sellerFeeBasisPoints": 500,
+  "isMutable": false,
+  "isSequential": false,
+  "creators": [
+    {
+      "address": "12qFPzCtaB9U5Qb1z2zUujeuAAeGKCQMXiymfib9zp3j",
+      "share": 100
+    }
+  ],
+  "uploadMethod": "bundlr",
+  "awsConfig": null,
+  "nftStorageAuthToken": null,
+  "shdwStorageAccount": null,
+  "pinataConfig": null,
+  "hiddenSettings": null,
+  "guards": {
+    "default": {
+      "solPayment": {
+        "value": 0.02,
+        "destination": "12qFPzCtaB9U5Qb1z2zUujeuAAeGKCQMXiymfib9zp3j"
+      },
+      "botTax": {
+        "value": 0.01,
+        "lastInstruction": true
+      }
+    }
+  }
+}
