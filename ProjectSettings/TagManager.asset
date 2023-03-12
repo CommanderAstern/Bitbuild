@@ -9,6 +9,8 @@ TagManager:
   - Interactable
   - UIDocument
   - Hatchange
+  - MagicCircle
+  - PlayerPopupUI
   layers:
   - Default
   - TransparentFX
