@@ -36,4 +36,5 @@
             <ui:Button text="Quit" display-tooltip-when-elided="true" name="quit2" style="border-top-left-radius: 8px; border-bottom-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; width: 130px; height: 80px; font-size: 40px; color: rgb(255, 255, 255); background-color: rgb(255, 85, 85);" />
         </ui:VisualElement>
     </ui:VisualElement>
+    <ui:ScrollView />
 </ui:UXML>

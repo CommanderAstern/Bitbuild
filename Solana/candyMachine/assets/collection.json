@@ -1,0 +1,15 @@
+{
+  "name": "BitBiuld Collection",
+  "symbol": "BB",
+  "description": "Collection of 25 Wearable Game Assets for the Blockchain game BitBiuld on the blockchain.",
+  "image": "collection.png",
+  "attributes": [],
+  "properties": {
+    "files": [
+      {
+        "uri": "collection.png",
+        "type": "image/png"
+      }
+    ]
+  }
+}

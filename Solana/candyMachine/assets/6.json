@@ -1,0 +1,24 @@
+{
+  "name": "Light Brown Boots",
+  "symbol": "BB",
+  "description": "This is the wearable NFT for the Bitbuild game. This is a wearable Boots. Item 6/24",
+  "image": "6.png",
+  "attributes": [
+    {
+      "trait_type": "id",
+      "value": "6"
+    },
+    {
+      "trait_type": "type",
+      "value": "Boots"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "6.png",
+        "type": "image/png"
+      }
+    ]
+  }
+}

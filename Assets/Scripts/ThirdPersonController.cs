@@ -287,8 +287,10 @@ namespace StarterAssets
                         float cooldownTime = 0.5f;
                         if(canInteract && _input.interact)
                         {
-                            PurchaceUIController uiController = GetComponent<PurchaceUIController>();
-                            uiController.HatStart();
+                            // PurchaceUIController uiController = GetComponent<PurchaceUIController>();
+                            // uiController.HatStart();
+                            gameObject.transform.GetChild(6).gameObject.SetActive(true);
+                            Debug.Log(gameObject.transform.GetChild(6).gameObject.name);
                             Debug.Log("Hatchange");
                             canInteract = false;
                             Invoke("ResetInteraction", cooldownTime);
