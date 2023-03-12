@@ -1,97 +1,217 @@
 {
   "program": {
-    "candyMachine": "3Cmd9XhuKdEX1hoiefkEyv7dLEcJByiBxte2yi3JCyRT",
-    "candyGuard": "HSSyAH5mz8XA9S8fhdU2Fyh3Vj1rGgjnXF9LYF71AExh",
-    "candyMachineCreator": "4CcKzMee5tWmPhJXi3iqnKKzf3uG5nNdWxANe39bUoW2",
-    "collectionMint": "AQjurmTCsbaNQVzKAiopB37Zgpynus24CjivnxaoPVmy"
+    "candyMachine": "LPyt8g7m96HN4XF7ShBKf5Z3Pp7PbaECZWwRDRDYcwt",
+    "candyGuard": "F5UqSdG5nSKhshNgWcYaEYis41vwr6J3MpSY9VsjmiVS",
+    "candyMachineCreator": "DfcNeh9r4zMXZMUA5ZTjA4R6aiikYzYdH14kiauhgmrx",
+    "collectionMint": "8EqVZxRstt3oVfxnEkQssDrCNFX5jNxYnMvp7Tt1b4dn"
   },
   "items": {
     "-1": {
-      "name": "Numbers Collection",
-      "image_hash": "845148a26244b24f37dbaf86270cfe05d28f574c7247383a64c1ad72a130906f",
-      "image_link": "https://arweave.net/3dGQ0467t8R2a0dFzDHw36sV1GWo5s_8TPfkoVjFdz8?ext=png",
-      "metadata_hash": "78315e014d50212b79be1b35e0107bfcb1bbf808815b926e58b829c92a068787",
-      "metadata_link": "https://arweave.net/Pa9XfggJ3R7MAUIHEDK4R0uGVnQg9HpoToST5Yk6W_c",
+      "name": "BitBiuld Collection",
+      "image_hash": "1edf24f2233c45261a55c9b0257b4bc67fe27fc3cc8b26d77ec19392c924d784",
+      "image_link": "https://arweave.net/jGJUxDlzzrHTbkoF-EC18rgx52xY_tzgKkPAxC8_lO4?ext=png",
+      "metadata_hash": "490e259f654e905c4c90f76b6864660732dbb29d55bbdfb6142a6374ab5d76a8",
+      "metadata_link": "https://arweave.net/pYr_c0tppwsVpKS8BFUBT2XtSX3g4oqlgyQJkSgQ9o8",
       "onChain": true
     },
     "0": {
-      "name": "Number #0001",
-      "image_hash": "36ae5333e54b457cedcc6ec93a84970f05ed57452ca9745a0768ed40cd93e5fa",
-      "image_link": "https://arweave.net/zHQmiXIoke-l6wXR406gR8v5mkOVICkBGF-AtCFn8VU?ext=png",
-      "metadata_hash": "600bca4ee6de7d54190134b585ef906e592960044f4c116deb3d1db8a682775b",
-      "metadata_link": "https://arweave.net/QOqLDqjNhxECRB7OL3iPbjHIjggQfQUbHK_Q9mw0Rm8",
+      "name": "Feather Hat",
+      "image_hash": "1c04420a597928c5cb31b3c8a51456b50599c1cd61b5563166a5aa2d06c8ae7b",
+      "image_link": "https://arweave.net/g4xMOiqXYekWt8qBn9zoccgXQzn_lXlQEURVcgG0V6s?ext=png",
+      "metadata_hash": "40f7c0bad1f3f683cb855e0a2fbbe9a51e2e97f027d21924616476e99d2fa7e1",
+      "metadata_link": "https://arweave.net/M-QSNJsN8ALHWj3D4yNIUSbndRz7vO6zCQgoZB1eEG0",
       "onChain": true
     },
     "1": {
-      "name": "Number #0002",
-      "image_hash": "c30ce4e4cb022932754f6a3da2de91e9da3194bf7dc5426333d596fa4b948e8f",
-      "image_link": "https://arweave.net/d0mc8GAi7jKGR4x5vXozPqZb9kK0znHdqrJWBbTVTVA?ext=png",
-      "metadata_hash": "e3bc55f8a1d2b43d534f10446a1e92a87d546d3947dfb41cae5eb943db0fa6b2",
-      "metadata_link": "https://arweave.net/WVprUXK4agj6xsTA8FMEQyk_Opl1XVP4_L3lckOW1xY",
+      "name": "Wizard Hat",
+      "image_hash": "f0c1ec69d41a0e7c1f547c3c43a809c4a4f6ced7085d808ac7ae7ddf45fad00b",
+      "image_link": "https://arweave.net/7vSZfxUf-etlLvow-W_ZKdkUpvkCA_7KsoVJnqIM-tQ?ext=png",
+      "metadata_hash": "f13a4f9b125cdbaf1410bac2dda5e6a8cf05d17c39b15835f72d1d5b2ee911ff",
+      "metadata_link": "https://arweave.net/4HCKPefx_B49U9Rlj72Ud3Y-OWj9YnSVTl2XB0pHAcM",
       "onChain": true
     },
     "2": {
-      "name": "Number #0003",
-      "image_hash": "fce1a5670d184691eb63db78a3f438bf6360a6fa99e0a6c82d432cb674d205ea",
-      "image_link": "https://arweave.net/0CSQjGA06JDTWzrq8GrvePCi0n49Tm_6-hiq8aPzmRg?ext=png",
-      "metadata_hash": "bf25e77a7bd3b5e66a0abe0f52e042cc67cb71502bee88e38b3262c7ca752b6e",
-      "metadata_link": "https://arweave.net/y-GBbB5c0WaL3F_pq071L-F9Tx8ciNfI0li1Ai2Z6bY",
+      "name": "Crown",
+      "image_hash": "ee15ee2f7b9be464412177d16bb43ea5d15372a919f5b616efd941ac0d062f19",
+      "image_link": "https://arweave.net/bxdaXBNUWANP0lA1KgnAzuciq0svz3SNuM00p3x6Xvs?ext=png",
+      "metadata_hash": "87adedd1a86b4e35a98059b1d940cf8a00a160bcecd899979930c00e441afd63",
+      "metadata_link": "https://arweave.net/tM_Xvn4E4V0uO9SlUyl8YlxzeENWXRum6d9CufJeovI",
       "onChain": true
     },
     "3": {
-      "name": "Number #0004",
-      "image_hash": "40f27fc65fbc78a16bdcbfd916af2fa72ef6a6da820dd4a1f34fe8087a329ad7",
-      "image_link": "https://arweave.net/AqFLEpw9GhLomWlcdEUVmNWn9-14A8chJbERr9s0kpg?ext=png",
-      "metadata_hash": "e26404952b5950952d42b79488f2a397fe455331cf6e4caec5962f6ca03765c1",
-      "metadata_link": "https://arweave.net/GG6UcdTbkMMa-58gY0jcrOSY4cm2hi1XSeOI_nOol5g",
+      "name": "Knight Helmet",
+      "image_hash": "26a112aefdce9322cca3d497e1ba7a5648a42053b38607c7664f86b15f8af909",
+      "image_link": "https://arweave.net/RoKkqoGFIOso6FsZyr5nnPwom8nxXg2kHhZV4qPpbmA?ext=png",
+      "metadata_hash": "562f11db9b757d8055de016c1e3d81fd57272233a16a29b3045fe9e0d10572bb",
+      "metadata_link": "https://arweave.net/Ozojis_gNBUD1WeQQp2o1TO1HcCmdONXE_hpA-W1-UY",
       "onChain": true
     },
     "4": {
-      "name": "Number #0005",
-      "image_hash": "0a671b125b423212f0c3c44ec9ae4efb165d4db02076dee5353cdd7620037843",
-      "image_link": "https://arweave.net/3kkAVjoND1hm5JtaY6tRB6wyUlqfMC7tSyA-nuKQHAI?ext=png",
-      "metadata_hash": "e62e40726e277a412a5d926ffd2bb4967eeb37c227e7f87919947619e7779a0f",
-      "metadata_link": "https://arweave.net/uChYkOYM6k2ERceSt3KJWTi_AR5GntHebWnbUXkaz8g",
+      "name": "Knight Helmet",
+      "image_hash": "54056189397095da1df9179c82c47fd415266919e2b0e055e698bca1871e58a1",
+      "image_link": "https://arweave.net/zVY0DGTK16DldTCJOxz-qMKZcoX1z71jS-YmzTPQ8F0?ext=png",
+      "metadata_hash": "c65c7f886050b2ad976059b29ca8c00b62e285f212e9aad563b2363dc6ce0478",
+      "metadata_link": "https://arweave.net/Of3RtKkU3bpOIyBmSCaf7MUFVcWvc0u-pStYAO36JQI",
       "onChain": true
     },
     "5": {
-      "name": "Number #0006",
-      "image_hash": "dece4d558f8b35bdfc9390e5f636f9163a3f63109e0175480eb9cc168b74901a",
-      "image_link": "https://arweave.net/R4mijjpZxbU4gr4enMIo0WFHQR7nCuSnBaaU9Ijsufo?ext=png",
-      "metadata_hash": "951a5a235f0b2b82821d12966dcc1961dffb1af471932ea12e98cd137b05597c",
-      "metadata_link": "https://arweave.net/q-sSJ0CqfLtZ1bmRV5SWZKtB4l6k0_9JmyQYaPlzHLs",
+      "name": "Brown Boots",
+      "image_hash": "213ef48990d1c6da98c6e447b1a76d7c27a317623c0e400f6213aa9af8c04bef",
+      "image_link": "https://arweave.net/MQMe-LdG1SKWp-rLzTl8N8KoPzgTKZkOEuL65fwYXqo?ext=png",
+      "metadata_hash": "7ff9fe066fae919f385a2e85c7b59effa767ce9c1da9eb7918ff1ca5b60e7740",
+      "metadata_link": "https://arweave.net/bli-YexvRNviC-dPDZcHk8rXBeHittoKufM50-Dohp4",
       "onChain": true
     },
     "6": {
-      "name": "Number #0007",
-      "image_hash": "c932a9a3392578695ce1b21527ba641441e046795dd65ac2f910df4a9c789c10",
-      "image_link": "https://arweave.net/JXNUc6k2PIhPkSGC1d-paii9ePMipi-kgFSYT3OeNIA?ext=png",
-      "metadata_hash": "1777430c7a173a4f9544d29fa613178108fa86dab16ce8de8e3a5d40ff68ab32",
-      "metadata_link": "https://arweave.net/exXbKvmIcSmYzExqx2eZlbn_o5KwJeQcUDebQlIpMTw",
+      "name": "Light Brown Boots",
+      "image_hash": "4bb48f4a2eb75575f72bbfc798ce2d0bd86ce03a4f4a905c0bbdc6fa7d9dcbc0",
+      "image_link": "https://arweave.net/EoQUFJeHjPCdFYJASwrEbkccI2ZdKLlsF-TgAn-0xq4?ext=png",
+      "metadata_hash": "c10ae4f378a9797b4f2767e7f112cc8408c330b7b1326a55a380741ae08c5188",
+      "metadata_link": "https://arweave.net/Ft1XJDYKuT4uKJr9McLJ1AKjAg9OWUqGJG79ccqTNvM",
       "onChain": true
     },
     "7": {
-      "name": "Number #0008",
-      "image_hash": "8b9237fdba6f2f042bd4d7aa13f17d357f4a9f5f9c8ea3c9681be70d783407b7",
-      "image_link": "https://arweave.net/pGiRGbYUN3OL6d7HT7BNILDQxKCfYdna6NcIfQceSxE?ext=png",
-      "metadata_hash": "963c6603e36ab200c6bc5ff2dae95fc2f09524c898b1a48c4cc7c92283c51617",
-      "metadata_link": "https://arweave.net/aVFu99qAoAqwZUEFOvT_UeBrBd8dSALPrEivxciE1k0",
+      "name": "Metal Boots V1",
+      "image_hash": "6d8d2562b3713d982f4d1ebfcb9edd44d30afbcd34cb537c4dc9c419dde977f1",
+      "image_link": "https://arweave.net/WSu-89uruH4PcgazXaGZLt9BQjlP-RtzKdRgvtga76Q?ext=png",
+      "metadata_hash": "42627869fc0a69055abca7cdf87bf0a521053f2c2be90ff7cf602c9347051c6e",
+      "metadata_link": "https://arweave.net/cVHQUtrrkMk0TwtZZVoIAQQSRl7u-0GAMrYTrDgPu5w",
       "onChain": true
     },
     "8": {
-      "name": "Number #0009",
-      "image_hash": "6603768936174e9bd4dcc00a76c4354aed00c7e120232338fc7bf56bf02c0de0",
-      "image_link": "https://arweave.net/1aq6P5Ztwxwat7WyO4RkInPtIp29wlkpwGoHUoVeRpY?ext=png",
-      "metadata_hash": "4539a7db3447b6a70edafeb198b16b11203137a00f8ffaaf649f7311245e907b",
-      "metadata_link": "https://arweave.net/YjAw16eNNrEg6n7Kd6mhy03eflsjAbj4sxQrLi6-Fts",
+      "name": "Metal Boots V2",
+      "image_hash": "e87ad6fd279b322a8f67ce67b1881f4b52d2cef35a33ee37fb1980dba0b33015",
+      "image_link": "https://arweave.net/rqE8YeHMzMDitKtveZNAw-thOvc6BLp-0padlpbY-Js?ext=png",
+      "metadata_hash": "6d60ab4707e9960e44fb47f0dda217b868195dd66129e751d5e6dd1b99f498c4",
+      "metadata_link": "https://arweave.net/779a6YMv5OBo_IDG82J_04vvZS3eoYjIzq1FDKb6MBc",
       "onChain": true
     },
     "9": {
-      "name": "Number #0010",
-      "image_hash": "287fcfb43c931987df8e5574e71f30da2db437a552542698027ea4b3dca4a3c0",
-      "image_link": "https://arweave.net/Tz8r9UsznXmLSviz_nhJL4XJ22CWOD9iu_EkFQFm5w0?ext=png",
-      "metadata_hash": "3043638318772da781b88391b95a27fea2c0b23fb5ef5b195b03d7475f55f837",
-      "metadata_link": "https://arweave.net/2zmsI3lJsXX-vwIdMBBTtmxIK4wqAQifOedKno0SZ0c",
+      "name": "Metal Boots V3",
+      "image_hash": "47e86bd543fdf6b5dcd3676976ce5887258e4d5c560eae91c25f5eaa21ef4060",
+      "image_link": "https://arweave.net/U7ORRtfMmhdYaT2Uwc8_I_SXf6YYc2RWaquWInxnWUo?ext=png",
+      "metadata_hash": "1281d238bb24590980a94f8cd5015c7217d8249db426643911207b6e2729ebd5",
+      "metadata_link": "https://arweave.net/WldfduDvoKan5nINOXD-qNNPQDnFshYJYqIMxbWypE4",
+      "onChain": true
+    },
+    "10": {
+      "name": "Metal Pant V1",
+      "image_hash": "9c51618519ee6dcacc43872eab3bef782f3b2e3d50c72ca6e95794a10ab3164c",
+      "image_link": "https://arweave.net/460FAUOWJnwpF8jeli3lEtS7Zn4QJorHH03usot9giw?ext=png",
+      "metadata_hash": "eb5d8732980455471b681cc80ef2a85b5456d81997c1b09d9ef7993b5b5652e5",
+      "metadata_link": "https://arweave.net/oZ-z5yLQzGU6aX80G74ikoGvOxe3TjUOJrG3o532OA4",
+      "onChain": true
+    },
+    "11": {
+      "name": "Metal Pant V2",
+      "image_hash": "e02bcfcd599b20052da51c49d0cea90146e12df94e6ecdaa13dfe23339241533",
+      "image_link": "https://arweave.net/xpE9BEwxDS1h_QoHjExH09B305bkA40W_IPJA3PtoX0?ext=png",
+      "metadata_hash": "70edc6b495db66fc0bd285703fc670fd1a98fdcab8d557e9b413562c9216ec02",
+      "metadata_link": "https://arweave.net/OiX0oUe-HKlHJo42Y_Z3YD42IijNBD-Xe0ggBTGbvv0",
+      "onChain": true
+    },
+    "12": {
+      "name": "Metal Pant V3",
+      "image_hash": "75771e23a13c60d05b107e8d2214089a429a0f02942c7dade7a5a7474e8a78fe",
+      "image_link": "https://arweave.net/adG4StUZXYI3k2qnDz9rES5ZwFgSn10oi3lgyqZ42kg?ext=png",
+      "metadata_hash": "3694da8dd2f45db4642e287429451b381e603f84663cb46af8c947213c01d130",
+      "metadata_link": "https://arweave.net/4xilkJv3zr2EeAeIGvOX5JBGYV29NujsFrFmRSTkrwk",
+      "onChain": true
+    },
+    "13": {
+      "name": "Metal Pant V4",
+      "image_hash": "3d2a636f5ea06e0ce8225159b116cc973892332e72b53d39a3c5920e811f6b48",
+      "image_link": "https://arweave.net/EQVOO5QZa7woyzpZ8QnyB8dIL0QxaSVu5t-9Fs2RdOM?ext=png",
+      "metadata_hash": "23f432df9cfc81f2fdfbf6e7b17cbf4919c04dc0b690d0631df9dd228b1a6713",
+      "metadata_link": "https://arweave.net/8q7bDzrxo8R9mG9v_FNaufNu1wnmsdT38HKGGTLziRg",
+      "onChain": true
+    },
+    "14": {
+      "name": "Metal Pant V5",
+      "image_hash": "dc70d534e05118e9662ba281b33a1ca9b4c00b4718864c917893bdd04c9ddcc3",
+      "image_link": "https://arweave.net/vwRaLUk2MXfMDBR1aMJJyysfkczhiDVNdPc0Q7YlCxU?ext=png",
+      "metadata_hash": "6ed9b683fb4ba74cf06afee7656489826a91148384e7120c8ffb34d3d9edbdf0",
+      "metadata_link": "https://arweave.net/hvlysC23cmV-VxXSaMeL5WF-El8UkZ13I85j-I2Wfxk",
+      "onChain": true
+    },
+    "15": {
+      "name": "Leather Shirt V1",
+      "image_hash": "74332df13d0b3ab8dc094bd02ea7c66ee03f175cbb3d5addb0cab50611e1fecf",
+      "image_link": "https://arweave.net/UBGcSPknnfmKWsW7ARnh37-R_H1-exhMWxz6mg_z1zQ?ext=png",
+      "metadata_hash": "462aa5be5c4b47a8951662d86d421a60211b05aca6b51941f30cdb23b96eca1f",
+      "metadata_link": "https://arweave.net/mcb1csYuOIY2GM6dUgfzamRNhMb6appcYB3V912ugmA",
+      "onChain": true
+    },
+    "16": {
+      "name": "Leather Shirt V2",
+      "image_hash": "73578865916d9fbb401854128b20fb70ebbd183f502c1abbd8be17661742a4a5",
+      "image_link": "https://arweave.net/XEgdTjJGdj8rdxt22n2geyqfNR1eqs-4Q7hHMTNRZBI?ext=png",
+      "metadata_hash": "6276b02ee448380f0640938ad6a8074d649a28cfd4a9956a7e1714674d22089b",
+      "metadata_link": "https://arweave.net/K8XAE_wjlcKPEo4Qz_Pc4H91Nn1utuNhwn23LBXnkuM",
+      "onChain": true
+    },
+    "17": {
+      "name": "Leather Shirt V3",
+      "image_hash": "75c427642f8928ac463cd1a4bcc28dd8ea0c641648c6dca0958294628cfa2333",
+      "image_link": "https://arweave.net/JNFzvZNr6J8z0kbvlr3llG90rCGXzlXE0Pv8mkD9nfg?ext=png",
+      "metadata_hash": "68bdf203e0ac6f7d8eff798fa1a581d7aa9f551b3e0ff3e294574c930ae2749c",
+      "metadata_link": "https://arweave.net/101eZqMH2LOTPfbXWHv8-RqRguwawJvdRu0OIH1z8GE",
+      "onChain": true
+    },
+    "18": {
+      "name": "Metal Shirt V1",
+      "image_hash": "bf8248c43a53e11851898c11737cbf05c59d74f272ebf1c864ac8e9a6ea55499",
+      "image_link": "https://arweave.net/oqqjsQlib23RO52uGJLkSQ0-KkQqqgF31LJuqMWqxsw?ext=png",
+      "metadata_hash": "0f20d75f4f4413931b63fa72fd6824debfd8aad8b6892429d3a5adc0a2a9f3a6",
+      "metadata_link": "https://arweave.net/s0Bu324cr-VUzeaK-84eo7L2snt2c2dwIVVyqNPrgJ0",
+      "onChain": true
+    },
+    "19": {
+      "name": "Metal Shirt V1",
+      "image_hash": "36874b779bde97d0a5abc44dffdb3a9c584241340a644976e139864665eb6606",
+      "image_link": "https://arweave.net/N-IdoXyJpYk9vq2FaI9ChIV13Tyb3QIu16X5R8fJWuE?ext=png",
+      "metadata_hash": "c5763c3bcbb10631260a30c0aa8817913491646a359cb06d4a1b161932e03c44",
+      "metadata_link": "https://arweave.net/SXKLtdD9pQ4sx8kdRJHfwrkrzjH40iKCyDz9cEO3hfY",
+      "onChain": true
+    },
+    "20": {
+      "name": "Dagger",
+      "image_hash": "be2e4310cb6f42425bf1aa13f8af800ac44eb157a6e8a5b01fb0f9edd4c7b5ac",
+      "image_link": "https://arweave.net/PFZ0koTOLwKn8u4ZbtHWWQi2lSYlkwCPXcx_seEHXvE?ext=png",
+      "metadata_hash": "21f3b428eee02195e38bed0eb84b30e1ff2a80811d4d7471e0a632c546bce5bc",
+      "metadata_link": "https://arweave.net/e6GZIM7t9Sg4Ht4C5hSQZEiOSQNm_MsH3Hfd5FeEUj4",
+      "onChain": true
+    },
+    "21": {
+      "name": "Sword",
+      "image_hash": "a760b6c72f2cf8af06f2e68883f632648fc20d2c3b0304520797fdfe77c29a97",
+      "image_link": "https://arweave.net/MotPTT-rfoGqa5gGfXkMAwfaO47GnmDmNPp_EKtqeC4?ext=png",
+      "metadata_hash": "e5e2ab8ac3d3be448b186912789f028fe8c389c1ff784cbeed8f854d4ec9252f",
+      "metadata_link": "https://arweave.net/cPuUVNaG2QkY2FN6csueN2FPjMYFfSthbbukcMIgWVw",
+      "onChain": true
+    },
+    "22": {
+      "name": "Long Sword",
+      "image_hash": "a5e6c674fa23bc04f333137f151a68b44291e8b995b753c229aeb91779afb942",
+      "image_link": "https://arweave.net/8m8hZhxq8jCmD76ENm9OpKk55Ua8IpMADXw8BfFab94?ext=png",
+      "metadata_hash": "2c17a3024a189b135803cb4c351c51c19d83cc66da2ab67392789d442f7e61e3",
+      "metadata_link": "https://arweave.net/hG7t7O2KczFKL2jQ4yLPviGXswknLW8XDgXNLC2E20o",
+      "onChain": true
+    },
+    "23": {
+      "name": "Kunai",
+      "image_hash": "1900bbbc26ab41ed5b26b38c3692831c56df6aa68d3b7bd02a02ca122469393e",
+      "image_link": "https://arweave.net/PCgkyz9tLa1xS6loDhYiMxTFwd2269si00LwbWZSyKk?ext=png",
+      "metadata_hash": "08feb5480671580c65b2ce97edf406e51492b63bf8f8d33236c6d2d88abdd1c8",
+      "metadata_link": "https://arweave.net/7fIsmLe0Eiu5yX3QN1YqSC2Te-jUlPWNByGfEvyOKbI",
+      "onChain": true
+    },
+    "24": {
+      "name": "Axe",
+      "image_hash": "df006dd497a480234b6cf58758dbf19cbc173915b189d7651a31b2d3a5e3ea71",
+      "image_link": "https://arweave.net/p62WksKFPFrs1g0POBC-wt_jwpVFuwncI_YQeU8H6sg?ext=png",
+      "metadata_hash": "bf9d532d624c455db6c485e8a1cc71121e941a32f84f60edf8138e17dd2ecb9c",
+      "metadata_link": "https://arweave.net/y5QANizny_43mn0azRiONB1PXzf5xeAzF2EEt3BVhK8",
       "onChain": true
     }
   }

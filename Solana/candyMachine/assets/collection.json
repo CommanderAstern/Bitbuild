@@ -1,7 +1,7 @@
 {
-  "name": "Numbers Collection",
-  "symbol": "NB",
-  "description": "Collection of 10 numbers on the blockchain.",
+  "name": "BitBiuld Collection",
+  "symbol": "BB",
+  "description": "Collection of 25 Wearable Game Assets for the Blockchain game BitBiuld on the blockchain.",
   "image": "collection.png",
   "attributes": [],
   "properties": {

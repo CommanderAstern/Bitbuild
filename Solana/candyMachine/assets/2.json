@@ -1,12 +1,16 @@
 {
-  "name": "Number #0003",
-  "symbol": "NB",
-  "description": "Collection of 10 numbers on the blockchain. This is the number 3/10.",
+  "name": "Crown",
+  "symbol": "BB",
+  "description": "This is the wearable NFT for the Bitbuild game. This is a wearable Hat. Item 2/24",
   "image": "2.png",
   "attributes": [
     {
-      "trait_type": "Number",
-      "value": "3"
+      "trait_type": "id",
+      "value": "2"
+    },
+    {
+      "trait_type": "type",
+      "value": "Hat"
     }
   ],
   "properties": {

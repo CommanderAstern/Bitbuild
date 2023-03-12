@@ -1,5 +1,5 @@
 {
-  "number": 10,
+  "number": 25,
   "symbol": "BB",
   "sellerFeeBasisPoints": 500,
   "isMutable": false,
@@ -21,10 +21,6 @@
       "solPayment": {
         "value": 0.02,
         "destination": "12qFPzCtaB9U5Qb1z2zUujeuAAeGKCQMXiymfib9zp3j"
-      },
-      "botTax": {
-        "value": 0.01,
-        "lastInstruction": true
       }
     }
   }

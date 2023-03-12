@@ -1,12 +1,16 @@
 {
-  "name": "Number #0009",
-  "symbol": "NB",
-  "description": "Collection of 10 numbers on the blockchain. This is the number 9/10.",
+  "name": "Metal Boots V2",
+  "symbol": "BB",
+  "description": "This is the wearable NFT for the Bitbuild game. This is a wearable Boots. Item 8/24",
   "image": "8.png",
   "attributes": [
     {
-      "trait_type": "Number",
-      "value": "9"
+      "trait_type": "id",
+      "value": "8"
+    },
+    {
+      "trait_type": "type",
+      "value": "Boots"
     }
   ],
   "properties": {
