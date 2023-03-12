@@ -8,56 +8,56 @@ const network = clusterApiUrl("devnet")
 const connection = new Connection(network);
 const METAPLEX = Metaplex.make(connection)
     .use(keypairIdentity(WALLET));
+const bs58 = require('bs58');
 
 async function checkNFT(candy_machine_address, owner_address) {
-    const candyMachine = await METAPLEX
-    .candyMachines()
-    .findByAddress({ address: new PublicKey(candy_machine_address) }); 
-    const myNfts = await METAPLEX.nfts().findAllByOwner({
-        owner: new PublicKey(owner_address)
-    });
-    var nfts = [];
-    for (i in myNfts) {
-        if (myNfts[i] && myNfts[i].collection) {
-            if (myNfts[i].collection.address.toString() == COLLECTION_ADDRESS) {
-                let nft = await METAPLEX.nfts().load({ "metadata": myNfts[i] });
-                nfts.push(nft.json);
-            }
-          }
-        // console.log(myNfts[i].mintAddress == new PublicKey("AQjurmTCsbaNQVzKAiopB37Zgpynus24CjivnxaoPVmy"));
-    }
+    // const candyMachine = await METAPLEX
+    // .candyMachines()
+    // .findByAddress({ address: new PublicKey(candy_machine_address) }); 
+    // const myNfts = await METAPLEX.nfts().findAllByOwner({
+    //     owner: new PublicKey(owner_address)
+    // });
     // var nfts = [];
-    // for(i in myNfts) {
-    //     let temp = myNfts[i];
-    //     const nft = await METAPLEX.nfts().load({ "metadata": temp });
-    //     nfts.push(nft);
+    // for (i in myNfts) {
+    //     if (myNfts[i] && myNfts[i].collection) {
+    //         if (myNfts[i].collection.address.toString() == COLLECTION_ADDRESS) {
+    //             let nft = await METAPLEX.nfts().load({ "metadata": myNfts[i] });
+    //             nfts.push(nft.json);
+    //         }
+    //       }
     // }
-    console.log(nfts);
+    // console.log(nfts);
+
+    const secretKeyString = 'n2upKhDxH3nQqwiy4sbDyxRKTC3WQ5cemJ8fg7iDgw7qGqPwhxJuQNthFQzLEibuymnpaDDfCk9zsRzWod2nR1k';
+    const secretKeyBytes = bs58.decode(secretKeyString);
+    const secretKeyUint8Array = new Uint8Array(secretKeyBytes);
+    let WALLETV3 = Keypair.fromSecretKey(secretKeyUint8Array);
+    console.log(WALLETV3.publicKey.toString());
 }
 checkNFT("LPyt8g7m96HN4XF7ShBKf5Z3Pp7PbaECZWwRDRDYcwt", "9Rc1PtEDtzAhXeGYJZJZxJBvF7YF85L7vDc2BTpsxNCQ");
 
-// async function mintNft() {
-//     const candyMachine = await METAPLEX
-//         .candyMachines()
-//         .findByAddress({ address: new PublicKey("LPyt8g7m96HN4XF7ShBKf5Z3Pp7PbaECZWwRDRDYcwt") }); 
-//     let { nft, response } = await METAPLEX.candyMachines().mint(
-//         {
-//             candyMachine,
-//             collectionUpdateAuthority: WALLET.publicKey,
-//             owner: WALLETV2.publicKey,
-//         },
-//         { 
-//             payer: WALLETV2
-//         },
-//         {
-//             commitment:'finalized'
-//         }
-//     )
+async function mintNft() {
+    const candyMachine = await METAPLEX
+        .candyMachines()
+        .findByAddress({ address: new PublicKey("LPyt8g7m96HN4XF7ShBKf5Z3Pp7PbaECZWwRDRDYcwt") }); 
+    let { nft, response } = await METAPLEX.candyMachines().mint(
+        {
+            candyMachine,
+            collectionUpdateAuthority: WALLET.publicKey,
+            owner: WALLETV2.publicKey,
+        },
+        { 
+            payer: WALLETV2
+        },
+        {
+            commitment:'finalized'
+        }
+    )
 
-//     console.log(`✅ - Minted NFT: ${nft.address.toString()}`);
-//     console.log(`     https://explorer.solana.com/address/${nft.address.toString()}?cluster=devnet`);
-//     console.log(`     https://explorer.solana.com/tx/${response.signature}?cluster=devnet`);
-// }
+    console.log(`✅ - Minted NFT: ${nft.address.toString()}`);
+    console.log(`     https://explorer.solana.com/address/${nft.address.toString()}?cluster=devnet`);
+    console.log(`     https://explorer.solana.com/tx/${response.signature}?cluster=devnet`);
+}
 
 // mintNft()
 // mintNft()
