@@ -10,6 +10,7 @@ public class WalletHolder : MonoBehaviour
     public Button subscriptionImage;
     public TextMeshProUGUI subscription_txt;
     public GameObject wallet;
+
     void Start()
     {
         wallet.SetActive(false);
@@ -17,4 +18,6 @@ public class WalletHolder : MonoBehaviour
             wallet.SetActive(!wallet.activeSelf);
         });
     }
+
+    
 }
