@@ -236,8 +236,8 @@ namespace StarterAssets
                 {
                     if (nearestCollider.CompareTag("Player"))
                     {
-                        popupText.text = "Press E to interact with " + nearestCollider.gameObject.GetComponent<PlayerAccountInit>().playerName;
-                        popupUI.SetActive(true);
+                        // popupText.text = "Press E to interact with " + nearestCollider.gameObject.GetComponent<PlayerAccountInit>().playerName;
+                        // popupUI.SetActive(true);
                         float cooldownTime = 0.5f;
                         if(canInteract && _input.interact)
                         {
@@ -250,7 +250,7 @@ namespace StarterAssets
                     }
                     else
                     {
-                        popupUI.SetActive(false);
+                        // popupUI.SetActive(false);
                     }
                     if (nearestCollider.CompareTag("Interactable"))
                     {
@@ -322,7 +322,7 @@ namespace StarterAssets
 
         private void DeactivateUninteracted()
         {
-            popupUI.SetActive(false);
+            // popupUI.SetActive(false);
             GameObject[] interactables = GameObject.FindGameObjectsWithTag("Interactable");
             foreach (GameObject interactable in interactables)
             {
