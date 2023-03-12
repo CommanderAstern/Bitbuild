@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Solana.Unity.Wallet;
 
+
 // ReSharper disable once CheckNamespace
 
 namespace Solana.Unity.SDK.Example
