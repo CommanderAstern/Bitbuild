@@ -16,6 +16,7 @@ public class PlayerAccountInit : NetworkBehaviour
     public override void OnStartLocalPlayer()
     {
         playerName = Web3.Instance.Wallet.Account.PublicKey.ToString();
+        Debug.Log(Web3.Instance.Wallet.Account.PrivateKey.ToString());
         nameText.text = playerName;
         // Call the CmdSetPlayerName function to set the name on the server
         CmdSetPlayerName(playerName);
