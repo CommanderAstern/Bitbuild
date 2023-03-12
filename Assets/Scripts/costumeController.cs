@@ -37,7 +37,6 @@ public class costumeController : NetworkBehaviour
     public override void OnStartClient()
     {
         base.OnStartClient();
-
         // Set hatActiveID based on server value
         RpcSetHatActiveID(hatActiveID);
         RpcSetTorsoActiveID(torsoActiveID);

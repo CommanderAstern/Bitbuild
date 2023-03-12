@@ -21,6 +21,7 @@ public class PlayerAccountInit : NetworkBehaviour
         // Call the CmdSetPlayerName function to set the name on the server
         CmdSetPlayerName(playerName);
         CmdSetPlayerAddress("authorizedAccount");
+        gameObject.GetComponent<SerializeUnityWebTest>().fetchNFTofAddress(playerName);
     }
 
     [Command]
