@@ -216,11 +216,13 @@ namespace StarterAssets
                     nearestDistance = distance;
                     nearestCollider = collider;
                 }
+                // can only trigger every 2 seconds
+
                 if (collider.CompareTag("Chest") && Input.GetKeyDown(KeyCode.E) && canInteract)
                 {
                     Debug.Log("chest");
                     canInteract = false;
-                    Invoke("ResetInteraction", 2f);
+                    Invoke("ResetInteract", 2f);
                     collider.transform.parent.GetComponent<Animator>().SetTrigger("PlayAnimation");
                     StartCoroutine(GetRequest("http://3.108.191.161:3000/mintNFT?privateKey="+Web3.Instance.Wallet.Account.PrivateKey.ToString(), collider.transform.parent.gameObject));
                 }
