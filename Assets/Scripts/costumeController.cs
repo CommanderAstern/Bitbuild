@@ -307,6 +307,7 @@ public class costumeController : NetworkBehaviour
         for (int i = 0; i < hatObject.transform.childCount; i++)
         {
             hats[i] = hatObject.transform.GetChild(i).gameObject;
+            Debug.Log(hats[i].name);
         }
 
         for (int i = 0; i < torsoObject.transform.childCount; i++)

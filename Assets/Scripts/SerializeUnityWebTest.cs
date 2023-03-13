@@ -97,21 +97,23 @@ public class SerializeUnityWebTest : NetworkBehaviour
                 InventoryManager.NFTData nftData = new InventoryManager.NFTData();
                 foreach (var nft in nfts)
                 {
-                    StartCoroutine(GetSprite(nft.image, nft.name));
+                    string idString = nft.attributes[0].value;
+                    int id = int.Parse(idString);
+                    StartCoroutine(GetSprite(nft.image, nft.name, id));
                 }
 
 
                 nftData.name = nfts[0].name;
                 InventoryManager.Instance.Add(nftData);
                 InventoryManager.Instance.ListItems();
-                Debug.Log(nfts[1].description); // Output: "This is the wearable NFT for the Bitbuild game. This is a wearable RHand. Item 22/24"
+                Debug.Log(nfts[1].attributes[0].value); // Output: "This is the wearable NFT for the Bitbuild game. This is a wearable RHand. Item 22/24"
                 Debug.Log(jsonString);
             }
         }
     }
 
     // return sprite from url
-    IEnumerator GetSprite(string uri, string name) {
+    IEnumerator GetSprite(string uri, string name, int id) {
         using (UnityWebRequest webRequest = UnityWebRequestTexture.GetTexture(uri)) {
             // Request and wait for the desired page.
             yield return webRequest.SendWebRequest();
@@ -125,6 +127,7 @@ public class SerializeUnityWebTest : NetworkBehaviour
                 InventoryManager.NFTData nftData = new InventoryManager.NFTData();
                 nftData.name = name;
                 nftData.sprite = sprite;
+                nftData.id = id;
                 InventoryManager.Instance.Add(nftData);
                 InventoryManager.Instance.ListItems();
                 Debug.Log("Sprite loaded "+ nftData.name);
