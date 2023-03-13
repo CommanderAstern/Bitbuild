@@ -1,0 +1,24 @@
+{
+    "name": "Metal Pant V1",
+    "symbol": "BB",
+    "description": "This is the wearable NFT for the Bitbuild game. This is a wearable Pant. Item 10/24",
+    "image": "10.png",
+    "attributes": [
+      {
+        "trait_type": "id",
+        "value": "10"
+      },
+      {
+        "trait_type": "type",
+        "value": "Pant"
+      }
+    ],
+    "properties": {
+      "files": [
+        {
+          "uri": "10.png",
+          "type": "image/png"
+        }
+      ]
+    }
+  }

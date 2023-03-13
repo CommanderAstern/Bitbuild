@@ -1,0 +1,24 @@
+{
+  "name": "Metal Boots V2",
+  "symbol": "BB",
+  "description": "This is the wearable NFT for the Bitbuild game. This is a wearable Boots. Item 8/24",
+  "image": "8.png",
+  "attributes": [
+    {
+      "trait_type": "id",
+      "value": "8"
+    },
+    {
+      "trait_type": "type",
+      "value": "Boots"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "8.png",
+        "type": "image/png"
+      }
+    ]
+  }
+}
