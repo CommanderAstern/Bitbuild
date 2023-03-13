@@ -50,26 +50,36 @@ public class InventoryManager : MonoBehaviour
                 if (category == 0)
                 {
                     CostumeController.SetHatActive(item.id%5+1,true);
+                    gameObject.transform.GetChild(2).GetChild(2).GetChild(0).GetChild(1).GetChild(0).GetComponent<UnityEngine.UI.Image>().sprite = item.sprite;
+                    // gameObject.transform.GetChild(2).GetChild(2).GetChild(0).GetChild(1).GetChild(0).GetChild(1).SetActive(true);
                     Debug.Log("Clicked on Hat");
                 }
                 else if (category == 1)
                 {
                     CostumeController.SetLegActive(item.id%5+1,true);
+                    gameObject.transform.GetChild(2).GetChild(2).GetChild(0).GetChild(1).GetChild(1).GetComponent<UnityEngine.UI.Image>().sprite = item.sprite;
+                    // gameObject.transform.GetChild(2).GetChild(2).GetChild(0).GetChild(1).GetChild(1).GetChild(1).SetActive(true);
                     Debug.Log("Clicked on Leg");
                 }
                 else if (category == 2)
                 {
                     CostumeController.SetHipsActive(item.id%5+1,true);
+                    gameObject.transform.GetChild(2).GetChild(2).GetChild(0).GetChild(1).GetChild(2).GetComponent<UnityEngine.UI.Image>().sprite = item.sprite;
+                    // gameObject.transform.GetChild(2).GetChild(2).GetChild(0).GetChild(1).GetChild(2).GetChild(1).SetActive(true);
                     Debug.Log("Clicked on Hips");
                 }
                 else if (category == 3)
                 {
                     CostumeController.SetTorsoActive(item.id%5+1,true);
+                    gameObject.transform.GetChild(2).GetChild(2).GetChild(0).GetChild(1).GetChild(3).GetComponent<UnityEngine.UI.Image>().sprite = item.sprite;
+                    // gameObject.transform.GetChild(2).GetChild(2).GetChild(0).GetChild(1).GetChild(3).GetChild(1).SetActive(true);
                     Debug.Log("Clicked on Torso");
                 }
                 else if (category == 4)
                 {
                     CostumeController.SetWeaponActive(item.id%5+1,true);
+                    gameObject.transform.GetChild(2).GetChild(2).GetChild(0).GetChild(1).GetChild(4).GetComponent<UnityEngine.UI.Image>().sprite = item.sprite;
+                    // gameObject.transform.GetChild(2).GetChild(2).GetChild(0).GetChild(1).GetChild(4).GetChild(1).SetActive(true);
                     Debug.Log("Clicked on Weapon");
                 }
                 Debug.Log("Clicked on " + item.id);
