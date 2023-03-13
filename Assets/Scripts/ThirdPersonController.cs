@@ -179,16 +179,16 @@ namespace StarterAssets
             int playerMask = 1 << LayerMask.GetMask("Player");
             int enemyMask = 1 << LayerMask.GetMask("Interactable");
             int hatMask = 1 << LayerMask.GetMask("Hatchange");
+            int chestMask = 1 << LayerMask.GetMask("Chest");
 
-            int layerMask = playerMask | enemyMask | hatMask;
+            int layerMask = playerMask | enemyMask | hatMask | chestMask;
 
-            Collider[] colliders = Physics.OverlapSphere(transform.position, 2f, LayerMask.GetMask("Player","Interactable"));
+            Collider[] colliders = Physics.OverlapSphere(transform.position, 2f, LayerMask.GetMask("Player","Interactable","Chest"));
 
 
             // find nearest player
             nearestCollider = null;
             float nearestDistance = float.MaxValue;
-
             foreach (var collider in colliders)
             {
                 // if not the player
@@ -201,6 +201,11 @@ namespace StarterAssets
                 {
                     nearestDistance = distance;
                     nearestCollider = collider;
+                }
+                if (collider.CompareTag("Chest") && Input.GetKeyDown(KeyCode.E))
+                {
+                    Debug.Log("chest");
+                    collider.transform.parent.GetComponent<Animator>().SetTrigger("PlayAnimation");
                 }
             }
             if (colliders.Length == 0)
