@@ -160,6 +160,14 @@ public class costumeController : NetworkBehaviour
         }
     }
 
+    public void SetHatActiveDefaullt(bool active)
+    {
+        if (isLocalPlayer)
+        {
+            CmdSetHatActive(0, active);
+        }
+    }
+    
     [Command]
     void CmdSetHatActive(int hatIndex, bool active)
     {
@@ -186,6 +194,14 @@ public class costumeController : NetworkBehaviour
         if (isLocalPlayer)
         {
             CmdSetTorsoActive(torsoIndex, active);
+        }
+    }
+
+    public void SetTorsoActiveDefaullt(bool active)
+    {
+        if (isLocalPlayer)
+        {
+            CmdSetTorsoActive(0, active);
         }
     }
 
@@ -218,6 +234,14 @@ public class costumeController : NetworkBehaviour
         }
     }
 
+    public void SetHipsActiveDefault(bool active)
+    {
+        if (isLocalPlayer)
+        {
+            CmdSetHipsActive(0, active);
+        }
+    }
+
     [Command]
     void CmdSetHipsActive(int hipsIndex, bool active)
     {
@@ -247,6 +271,14 @@ public class costumeController : NetworkBehaviour
         }
     }
 
+    public void SetLegActiveDefault(bool active)
+    {
+        if (isLocalPlayer)
+        {
+            CmdSetLegActive(0, active);
+        }
+    }
+
     [Command]
     void CmdSetLegActive(int legIndex, bool active)
     {
@@ -273,6 +305,14 @@ public class costumeController : NetworkBehaviour
         if (isLocalPlayer)
         {
             CmdSetWeaponActive(weaponIndex, active);
+        }
+    }
+
+    public void SetWeaponActiveDefault(bool active)
+    {
+        if (isLocalPlayer)
+        {
+            CmdSetWeaponActive(0, active);
         }
     }
 
