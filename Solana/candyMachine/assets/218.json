@@ -1,0 +1,24 @@
+{
+    "name": "Metal Shirt V1",
+    "symbol": "BB",
+    "description": "This is the wearable NFT for the Bitbuild game. This is a wearable Shirt. Item 18/24",
+    "image": "18.png",
+    "attributes": [
+      {
+        "trait_type": "id",
+        "value": "18"
+      },
+      {
+        "trait_type": "type",
+        "value": "Shirt"
+      }
+    ],
+    "properties": {
+      "files": [
+        {
+          "uri": "18.png",
+          "type": "image/png"
+        }
+      ]
+    }
+  }

@@ -1,0 +1,24 @@
+{
+    "name": "Axe",
+    "symbol": "BB",
+    "description": "This is the wearable NFT for the Bitbuild game. This is a wearable RHand. Item 24/24",
+    "image": "24.png",
+    "attributes": [
+      {
+        "trait_type": "id",
+        "value": "24"
+      },
+      {
+        "trait_type": "type",
+        "value": "RHand"
+      }
+    ],
+    "properties": {
+      "files": [
+        {
+          "uri": "24.png",
+          "type": "image/png"
+        }
+      ]
+    }
+  }

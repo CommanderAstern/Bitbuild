@@ -1,0 +1,24 @@
+{
+  "name": "Knight Helmet",
+  "symbol": "BB",
+  "description": "This is the wearable NFT for the Bitbuild game. This is a wearable Hat. Item 4/24",
+  "image": "4.png",
+  "attributes": [
+    {
+      "trait_type": "id",
+      "value": "4"
+    },
+    {
+      "trait_type": "type",
+      "value": "Hat"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "4.png",
+        "type": "image/png"
+      }
+    ]
+  }
+}

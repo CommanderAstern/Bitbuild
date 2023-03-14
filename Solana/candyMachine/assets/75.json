@@ -1,0 +1,24 @@
+{
+  "name": "Feather Hat",
+  "symbol": "BB",
+  "description": "This is the wearable NFT for the Bitbuild game. This is a wearable Hat. Item 0/24",
+  "image": "0.png",
+  "attributes": [
+    {
+      "trait_type": "id",
+      "value": "0"
+    },
+    {
+      "trait_type": "type",
+      "value": "Hat"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "0.png",
+        "type": "image/png"
+      }
+    ]
+  }
+}

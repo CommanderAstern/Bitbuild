@@ -1,0 +1,24 @@
+{
+    "name": "Dagger",
+    "symbol": "BB",
+    "description": "This is the wearable NFT for the Bitbuild game. This is a wearable RHand. Item 20/24",
+    "image": "20.png",
+    "attributes": [
+      {
+        "trait_type": "id",
+        "value": "20"
+      },
+      {
+        "trait_type": "type",
+        "value": "RHand"
+      }
+    ],
+    "properties": {
+      "files": [
+        {
+          "uri": "20.png",
+          "type": "image/png"
+        }
+      ]
+    }
+  }

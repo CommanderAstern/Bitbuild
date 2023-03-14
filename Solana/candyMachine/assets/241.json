@@ -1,0 +1,24 @@
+{
+    "name": "Leather Shirt V2",
+    "symbol": "BB",
+    "description": "This is the wearable NFT for the Bitbuild game. This is a wearable Shirt. Item 16/24",
+    "image": "16.png",
+    "attributes": [
+      {
+        "trait_type": "id",
+        "value": "16"
+      },
+      {
+        "trait_type": "type",
+        "value": "Shirt"
+      }
+    ],
+    "properties": {
+      "files": [
+        {
+          "uri": "16.png",
+          "type": "image/png"
+        }
+      ]
+    }
+  }

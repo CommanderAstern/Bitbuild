@@ -16,28 +16,36 @@ const METAPLEX = Metaplex.make(connection)
 
 
 app.get("/getOwnedNFT", async (req, res, next) => {
+
     const ownerAddress = req.query.ownerAddress;
     if (ownerAddress == null) {
         return res.status(400).json({ message: "Missing required parameters" });
     }
 
-    const candyMachine = await METAPLEX
-    .candyMachines()
-    .findByAddress({ address: new PublicKey(CANDY_MACHINE_ADDRESS) }); 
-    const myNfts = await METAPLEX.nfts().findAllByOwner({
-        owner: new PublicKey(ownerAddress)
-    });
-    var nfts = [];
-    for (i in myNfts) {
-        if (myNfts[i] && myNfts[i].collection) {
-            if (myNfts[i].collection.address.toString() == COLLECTION_ADDRESS) {
-                let nft = await METAPLEX.nfts().load({ "metadata": myNfts[i] });
-                nfts.push(nft.json);
-            }
-          }
+    try {
+        const candyMachine = await METAPLEX
+        .candyMachines()
+        .findByAddress({ address: new PublicKey(CANDY_MACHINE_ADDRESS) }); 
+        const myNfts = await METAPLEX.nfts().findAllByOwner({
+            owner: new PublicKey(ownerAddress)
+        });
+        var nfts = [];
+        for (i in myNfts) {
+            if (myNfts[i] && myNfts[i].collection) {
+                if (myNfts[i].collection.address.toString() == COLLECTION_ADDRESS) {
+                    let nft = await METAPLEX.nfts().load({ "metadata": myNfts[i] });
+                    nfts.push(nft.json);
+                }
+              }
+        }
+        console.log("NFT fetched for " + ownerAddress);
+        res.json(nfts);
+        
+    } catch (error) {
+        console.log(error);
+        res.json({"error": error});
     }
-    console.log("NFT fetched for " + ownerAddress);
-    res.json(nfts);
+
 });
 
 app.get("/mintNFT", async (req, res, next) => {
@@ -45,25 +53,33 @@ app.get("/mintNFT", async (req, res, next) => {
     if (privateKey == null) {
         return res.status(400).json({ message: "Missing required parameters" });
     }
-    wallet = Keypair.fromSecretKey(new Uint8Array(bs58.decode(privateKey)));
-    const candyMachine = await METAPLEX
-        .candyMachines()
-        .findByAddress({ address: new PublicKey("LPyt8g7m96HN4XF7ShBKf5Z3Pp7PbaECZWwRDRDYcwt") }); 
-    let { nft, response } = await METAPLEX.candyMachines().mint(
-        {
-            candyMachine,
-            collectionUpdateAuthority: WALLET.publicKey,
-            owner: wallet.publicKey,
-        },
-        { 
-            payer: wallet
-        },
-        {
-            commitment:'finalized'
-        }
-    )
-    console.log(`✅ - Minted NFT: ${nft.address.toString()}`);
-    res.json({"nftAddress": nft.address.toString(), "txAddress":response.signature});
+    try {
+        wallet = Keypair.fromSecretKey(new Uint8Array(bs58.decode(privateKey)));
+        const candyMachine = await METAPLEX
+            .candyMachines()
+            .findByAddress({ address: new PublicKey("LPyt8g7m96HN4XF7ShBKf5Z3Pp7PbaECZWwRDRDYcwt") }); 
+        let { nft, response } = await METAPLEX.candyMachines().mint(
+            {
+                candyMachine,
+                collectionUpdateAuthority: WALLET.publicKey,
+                owner: wallet.publicKey,
+            },
+            { 
+                payer: wallet
+            },
+            {
+                commitment:'finalized'
+            }
+        )
+        console.log("NFT")
+        console.log(`✅ - Minted NFT: ${nft.address.toString()}`);
+        res.json({"nftAddress": nft.address.toString(), "txAddress":response.signature});
+        
+    } catch (error) {
+        console.log(error);
+        res.json({"error": error}); 
+    }
+
     // console.log(`     https://explorer.solana.com/address/${nft.address.toString()}?cluster=devnet`);
     // console.log(`     https://explorer.solana.com/tx/${response.signature}?cluster=devnet`);
 });

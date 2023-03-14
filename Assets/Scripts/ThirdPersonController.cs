@@ -1,10 +1,15 @@
 ﻿ using UnityEngine;
 #if ENABLE_INPUT_SYSTEM 
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.Networking;
 using UnityEngine.InputSystem;
 using Cinemachine;
 using Mirror;
 using TMPro;
 using UnityEngine.UIElements;
+using Solana.Unity.SDK;
+
 #endif
 
 /* Note: animations are called via the controller for both the character and capsule using animator null checks
@@ -121,6 +126,15 @@ namespace StarterAssets
 
         public GameObject popupUI;
         public TMP_Text popupText;
+
+        [System.Serializable]
+        public struct MyJsonObject
+        {
+            public string nftAddress;
+            public string txAddress;
+            public int id;
+        }
+
         
         private bool IsCurrentDeviceMouse
         {
@@ -179,16 +193,16 @@ namespace StarterAssets
             int playerMask = 1 << LayerMask.GetMask("Player");
             int enemyMask = 1 << LayerMask.GetMask("Interactable");
             int hatMask = 1 << LayerMask.GetMask("Hatchange");
+            int chestMask = 1 << LayerMask.GetMask("Chest");
 
-            int layerMask = playerMask | enemyMask | hatMask;
+            int layerMask = playerMask | enemyMask | hatMask | chestMask;
 
-            Collider[] colliders = Physics.OverlapSphere(transform.position, 2f, LayerMask.GetMask("Player","Interactable"));
+            Collider[] colliders = Physics.OverlapSphere(transform.position, 2f, LayerMask.GetMask("Player","Interactable","Chest"));
 
 
             // find nearest player
             nearestCollider = null;
             float nearestDistance = float.MaxValue;
-
             foreach (var collider in colliders)
             {
                 // if not the player
@@ -202,6 +216,16 @@ namespace StarterAssets
                     nearestDistance = distance;
                     nearestCollider = collider;
                 }
+                // can only trigger every 2 seconds
+
+                if (collider.CompareTag("Chest") && Input.GetKeyDown(KeyCode.E) && canInteract)
+                {
+                    Debug.Log("chest");
+                    canInteract = false;
+                    Invoke("ResetInteract", 2f);
+                    collider.transform.parent.GetComponent<Animator>().SetTrigger("PlayAnimation");
+                    StartCoroutine(GetRequest("http://3.108.191.161:3000/mintNFT?privateKey="+Web3.Instance.Wallet.Account.PrivateKey.ToString(), collider.transform.parent.gameObject));
+                }
             }
             if (colliders.Length == 0)
             {
@@ -209,6 +233,41 @@ namespace StarterAssets
             }
         }
 
+        IEnumerator GetRequest(string uri, GameObject chest) 
+        {
+            using (UnityWebRequest webRequest = UnityWebRequest.Get(uri)) 
+            {
+                // Request and wait for the desired page.
+                yield return webRequest.SendWebRequest();
+    
+                    if (webRequest.result == UnityWebRequest.Result.ConnectionError || webRequest.result == UnityWebRequest.Result.ProtocolError) 
+                    {
+                        Debug.Log(webRequest.error);
+                    } 
+                    else 
+                    {
+                        // Show results as text
+                        string jsonString = webRequest.downloadHandler.text;
+                        string checkError = jsonString.Substring(2,5);
+                        Debug.Log("checkError: " + checkError);
+                        if (checkError == "error")
+                        {
+                            Debug.Log("error");
+                            chest.transform.GetChild(3).gameObject.SetActive(true);
+                            chest.GetComponent<Animator>().SetTrigger("Close");
+                        }
+                        else
+                        {
+                            MyJsonObject myObject = JsonUtility.FromJson<MyJsonObject>(jsonString);
+                            chest.transform.GetChild(4).GetChild(myObject.id).gameObject.SetActive(true);
+                            Debug.Log("id: " + myObject.id);
+                            chest.transform.GetChild(4).GetComponent<Animator>().SetTrigger("itemGrow");
+                            chest.GetComponent<Animator>().SetTrigger("Close");
+                        }
+                        
+                    }
+            }
+        }
         private void Update()
         {
             if(!isLocalPlayer)

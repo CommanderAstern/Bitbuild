@@ -12,6 +12,7 @@ TagManager:
   - walletMain
   - MagicCircle
   - PlayerPopupUI
+  - Chest
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - Counters
   - Player
   - Interactable
-  - 
+  - Chest
   - 
   - 
   - 
