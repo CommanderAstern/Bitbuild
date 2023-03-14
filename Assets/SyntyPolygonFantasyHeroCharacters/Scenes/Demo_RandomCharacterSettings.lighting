@@ -6,10 +6,17 @@ LightingSettings:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<<< HEAD:Assets/SyntyPolygonFantasyHeroCharacters/Scenes/Demo_RandomCharacterSettings.lighting
   m_Name: Demo_RandomCharacterSettings
   serializedVersion: 5
   m_GIWorkflowMode: 0
   m_EnableBakedLightmaps: 1
+========
+  m_Name: demoScene_freeSettings
+  serializedVersion: 4
+  m_GIWorkflowMode: 0
+  m_EnableBakedLightmaps: 0
+>>>>>>>> assets-completion:Assets/Fantasy Forest Environment Free Sample/Scenes/demoScene_freeSettings.lighting
   m_EnableRealtimeLightmaps: 1
   m_RealtimeEnvironmentLighting: 1
   m_BounceScale: 1

@@ -10,6 +10,8 @@ TagManager:
   - UIDocument
   - Hatchange
   - walletMain
+  - MagicCircle
+  - PlayerPopupUI
   layers:
   - Default
   - TransparentFX
