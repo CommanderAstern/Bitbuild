@@ -13,6 +13,7 @@ TagManager:
   - MagicCircle
   - PlayerPopupUI
   - Chest
+  - ScoreController
   layers:
   - Default
   - TransparentFX
