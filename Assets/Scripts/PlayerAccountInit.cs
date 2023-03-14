@@ -4,6 +4,7 @@ using Mirror;
 using Solana.Unity.SDK;
 using System.Collections;
 using UnityEngine.Networking;
+using DapperDino.Mirror.Tutorials.Chat;
 
 public class PlayerAccountInit : NetworkBehaviour
 {
@@ -31,6 +32,7 @@ public class PlayerAccountInit : NetworkBehaviour
         Debug.Log(Web3.Instance.Wallet.Account.PublicKey.ToString());
         Debug.Log(Web3.Instance.Wallet.Account.PrivateKey.ToString());
         nameText.text = playerName;
+        gameObject.GetComponent<ChatBehaviour>().playerInfo = playerName;
         // Call the CmdSetPlayerName function to set the name on the server
         CmdSetPlayerName(playerName);
         CmdSetPlayerAddress("authorizedAccount");
@@ -68,6 +70,8 @@ public class PlayerAccountInit : NetworkBehaviour
     {
         // Update the name text on all clients
         nameText.text = newValue;
+        gameObject.GetComponent<ChatBehaviour>().playerInfo = playerName;
+
     }
 
     IEnumerator GetRequest(string uri) 

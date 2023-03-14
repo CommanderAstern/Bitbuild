@@ -10,7 +10,7 @@ namespace DapperDino.Mirror.Tutorials.Chat
         [SerializeField] private GameObject chatUI = null;
         [SerializeField] private TMP_Text chatText = null;
         [SerializeField] private TMP_InputField inputField = null;
-
+        public String playerInfo = "Player";
         private static event Action<string> OnMessage;
 
         public override void OnStartAuthority()
@@ -36,7 +36,7 @@ namespace DapperDino.Mirror.Tutorials.Chat
         [Client]
         public void Send(string message)
         {
-            if (!Input.GetKeyDown(KeyCode.Semicolon)) { return; }
+            if (!Input.GetKeyDown(KeyCode.Return)) { return; }
 
             if (string.IsNullOrWhiteSpace(message)) { return; }
 
@@ -48,7 +48,7 @@ namespace DapperDino.Mirror.Tutorials.Chat
         [Command]
         private void CmdSendMessage(string message)
         {
-            RpcHandleMessage($"[{connectionToClient.connectionId}]: {message}");
+            RpcHandleMessage($"[{playerInfo}]: {message}");
         }
 
         [ClientRpc]
