@@ -40,7 +40,7 @@ public class PlayerAccountInit : NetworkBehaviour
 
     public void startFetchName()
     {
-        StartCoroutine(GetRequest("http://3.110.83.239:3000/getPlayerInfo?publicKey="+Web3.Instance.Wallet.Account.PublicKey.ToString()));
+        StartCoroutine(GetRequest("http://13.232.168.166:3000/getPlayerInfo?publicKey="+Web3.Instance.Wallet.Account.PublicKey.ToString()));
     }
 
 
