@@ -38,45 +38,6 @@ public class PurchaceUIController : MonoBehaviour
     private static readonly IRpcClient rpcClient = ClientFactory.GetClient(Cluster.DevNet);
     public void Start()
     {
-        //get gameObject by tag only one
-        // root = GameObject.FindWithTag("UIDocument").GetComponent<UIDocument>().rootVisualElement;
-        // root = transform.GetChild(1).gameObject.GetComponent<UIDocument>().rootVisualElement;
-        root = GetComponentInChildren<UIDocument>().rootVisualElement;
-        quitButton = root.Q<Button>("quit");
-        createButton = root.Q<Button>("createAccount");
-
-        buy1 = root.Q<Button>("buy1");
-        buy2 = root.Q<Button>("buy2");
-        buy3 = root.Q<Button>("buy3");
-        buy4 = root.Q<Button>("buy4");
-        buy5 = root.Q<Button>("buy5");
-
-        select1 = root.Q<Button>("select1");
-        select2 = root.Q<Button>("select2");
-        select3 = root.Q<Button>("select3");
-        select4 = root.Q<Button>("select4");
-        select5 = root.Q<Button>("select5");
-
-        quit2 = root.Q<Button>("quit2");
-
-        buyGUI = root.Q<VisualElement>("buyGUI");
-        address = GetComponent<PlayerAccountInit>().playerName;
-        quitButton.clicked += QuitButtonPressed;
-        createButton.clicked += CreateButtonPressed;
-
-        buy1.clicked += Buy1ButtonPressed;
-        buy2.clicked += Buy2ButtonPressed;
-        buy3.clicked += Buy3ButtonPressed;
-        buy4.clicked += Buy4ButtonPressed;
-        buy5.clicked += Buy5ButtonPressed;
-
-        select1.clicked += Select1Pressed;
-        select2.clicked += Select2Pressed;
-        select3.clicked += Select3Pressed;
-        select4.clicked += Select4Pressed;
-        select5.clicked += Select5Pressed;
-
-        quit2.clicked += QuitButton2Pressed;
 
     }
     public void UIStart()
