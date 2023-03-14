@@ -6,6 +6,8 @@ public class MagicCircle : MonoBehaviour
     public float detectionRadius = 2f;
     public KeyCode teleportButton = KeyCode.E;
     public GameObject popupUI;
+    public GameObject Player;
+
     // public TMP_Text popupText;
     // public string nextLevelName;
 
@@ -13,6 +15,8 @@ public class MagicCircle : MonoBehaviour
     {
         if (Input.GetKeyDown(teleportButton) && IsPlayerInRange())
         {
+            DontDestroyOnLoad(Player);
+            DontDestroyOnLoad(GameObject.FindWithTag("FollowCamera"));
             SceneManager.LoadScene(1);
         }
 
@@ -43,6 +47,7 @@ public class MagicCircle : MonoBehaviour
         {
             if (collider.CompareTag("Player"))
             {
+                Player = collider.gameObject;
                 return true;
             }
         }

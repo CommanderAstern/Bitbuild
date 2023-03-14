@@ -111,7 +111,7 @@ namespace StarterAssets
         private Animator _animator;
         private CharacterController _controller;
         private StarterAssetsInputs _input;
-        private GameObject _mainCamera;
+        public GameObject _mainCamera;
         private Collider nearestCollider;
 
         private GameObject _followCamera;
@@ -219,6 +219,7 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
+            Attack();
             Interact();
         }
 
@@ -226,6 +227,18 @@ namespace StarterAssets
         {
             CameraRotation();
         }
+        private void Attack()
+        {
+            if(_input.interact)
+            {
+                Debug.Log("Interact");
+            }
+            if(_input.attack)
+            {
+                Debug.Log("Attack");
+            }
+        }
+
         private void Interact()
         {
             // Debug.Log(nearestCollider);
