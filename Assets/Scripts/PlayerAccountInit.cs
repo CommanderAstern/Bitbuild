@@ -8,7 +8,10 @@ using UnityEngine.Networking;
 public class PlayerAccountInit : NetworkBehaviour
 {
     [SyncVar(hook = nameof(OnNameChanged))]
-    public string playerName;
+    public string playerName = "";
+    [SyncVar]
+    public string playerBio = "";
+
 
     [SyncVar]
     string authorizedAccount;
@@ -31,9 +34,15 @@ public class PlayerAccountInit : NetworkBehaviour
         // Call the CmdSetPlayerName function to set the name on the server
         CmdSetPlayerName(playerName);
         CmdSetPlayerAddress("authorizedAccount");
-        StartCoroutine(GetRequest("http://3.110.83.239:3000/mintNFT?publicKey="+Web3.Instance.Wallet.Account.PublicKey.ToString()));
+        startFetchName();
         gameObject.GetComponent<SerializeUnityWebTest>().fetchNFTofAddress(playerName);
     }
+
+    public void startFetchName()
+    {
+        StartCoroutine(GetRequest("http://3.110.83.239:3000/getPlayerInfo?publicKey="+Web3.Instance.Wallet.Account.PublicKey.ToString()));
+    }
+
 
     [Command]
     private void CmdSetPlayerName(string name)
@@ -48,12 +57,18 @@ public class PlayerAccountInit : NetworkBehaviour
         // Set the player's name on the server
         authorizedAccount = sdkAccount;
     }
+
+    [Command]
+    public void CmdSetPlayerBio(string bio)
+    {
+        // Set the player's name on the server
+        playerBio = bio;
+    }
     private void OnNameChanged(string oldValue, string newValue)
     {
         // Update the name text on all clients
         nameText.text = newValue;
     }
-
 
     IEnumerator GetRequest(string uri) 
     {
@@ -81,6 +96,7 @@ public class PlayerAccountInit : NetworkBehaviour
                         MyJsonObject myObject = JsonUtility.FromJson<MyJsonObject>(jsonString);
                         Debug.Log("id: " + myObject.name);
                         CmdSetPlayerName(myObject.name);
+                        CmdSetPlayerBio(myObject.bio);
                     }
                     
                 }

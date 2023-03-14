@@ -29,7 +29,7 @@ public class waitForQ : NetworkBehaviour
         }
 
         // check if I is pressed
-        if (Input.GetKeyDown(KeyCode.T) && isLocalPlayer)
+        if (Input.GetKeyDown(KeyCode.Semicolon) && isLocalPlayer)
         {
             // if active
             if (transform.GetChild(2).GetChild(3).gameObject.activeSelf)
@@ -44,6 +44,26 @@ public class waitForQ : NetworkBehaviour
             {
                 // enable
                 transform.GetChild(2).GetChild(3).gameObject.SetActive(true);
+                // disable cursor
+                Cursor.lockState = CursorLockMode.None;
+
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Quote) && isLocalPlayer)
+        {
+            // if active
+            if (transform.GetChild(2).GetChild(5).gameObject.activeSelf)
+            {
+                // disable
+                transform.GetChild(2).GetChild(5).gameObject.SetActive(false);
+                Cursor.lockState = CursorLockMode.Locked;
+                // enable cursor
+            }
+            // if not active
+            else
+            {
+                // enable
+                transform.GetChild(2).GetChild(5).gameObject.SetActive(true);
                 // disable cursor
                 Cursor.lockState = CursorLockMode.None;
 

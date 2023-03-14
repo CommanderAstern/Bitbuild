@@ -25,6 +25,8 @@ namespace StarterAssets
     {
         [SerializeField] private GameObject targetCameraFollow;
         [SerializeField] private TMP_Text nameText;
+        [SerializeField] private TMP_Text bioTextPopup;
+        [SerializeField] private TMP_Text AddressTextPopup;
         [Header("Player")]
         [Tooltip("Move speed of the character in m/s")]
         public float MoveSpeed = 2.0f;
@@ -295,21 +297,23 @@ namespace StarterAssets
                 {
                     if (nearestCollider.CompareTag("Player"))
                     {
-                        // popupText.text = "Press E to interact with " + nearestCollider.gameObject.GetComponent<PlayerAccountInit>().playerName;
-                        // popupUI.SetActive(true);
+                        popupText.text = "Press E to interact with " + nearestCollider.gameObject.GetComponent<PlayerAccountInit>().playerName;
+                        popupUI.SetActive(true);
                         float cooldownTime = 0.5f;
                         if(canInteract && _input.interact)
                         {
-                            PurchaceUIController uiController = GetComponent<PurchaceUIController>();
-                            
                             canInteract = false;
+                            bioTextPopup.text = nearestCollider.gameObject.GetComponent<PlayerAccountInit>().playerName;
+                            AddressTextPopup.text = nearestCollider.gameObject.GetComponent<PlayerAccountInit>().playerBio;
+                            transform.GetChild(2).GetChild(4).gameObject.SetActive(true);
+                            UnityEngine.Cursor.lockState = CursorLockMode.None;
                             Invoke("ResetInteraction", cooldownTime);
 
                         }
                     }
                     else
                     {
-                        // popupUI.SetActive(false);
+                        popupUI.SetActive(false);
                     }
                     if (nearestCollider.CompareTag("Interactable"))
                     {
@@ -381,7 +385,7 @@ namespace StarterAssets
 
         private void DeactivateUninteracted()
         {
-            // popupUI.SetActive(false);
+            popupUI.SetActive(false);
             GameObject[] interactables = GameObject.FindGameObjectsWithTag("Interactable");
             foreach (GameObject interactable in interactables)
             {
