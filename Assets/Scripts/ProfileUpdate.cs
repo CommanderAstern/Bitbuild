@@ -10,6 +10,6 @@ public class ProfileUpdate : MonoBehaviour {
     
     public void UpdateProfile() {
         Debug.Log(inputBioField.text);
-        Debug.Log(inputNameField.Text);
+        Debug.Log(inputNameField.text);
     }
 }
