@@ -1,53 +1,31 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
 
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/CommanderAstern/Flowtopia">
-    <img src="./images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/CommanderAstern/Bitbuild">
+    <img src="./images/logo.png" alt="Logo" width="80">
   </a>
 
-<h3 align="center">Flowtopia</h3>
+<h3 align="center">Bitbuild</h3>
 
   <p align="center">
-    Enter a dynamic 3D metaverse where you can connect, compete, and customize with players from around the world. Build your own virtual identity and explore a world of endless possibilities
+    A 3D virtual platform for people to build games, customize their characters, connect with others and much more!
     <br />
     <br />
-    <a href="https://drive.google.com/file/d/1ub7fCKZdwhkmKHZ6-7y-sKDaxV_D_er9/view?usp=sharing">Download APK</a>
+    <a href="">Download APK</a>
     ·
-    <a href="https://www.canva.com/design/DAFb7j9MvnU/sTkqU-Kvw7V8H2BKPAxXJg/edit?utm_content=DAFb7j9MvnU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Pitch Deck</a>
+    <a href="">Pitch Deck</a>
     ·
-    <a href="https://github.com/CommanderAstern/Flowtopia/issues">Request Feature</a>
+    <a href="https://github.com/CommanderAstern/Bitbuild/issues">Request Feature</a>
   </p>
 </div>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -72,31 +50,29 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
 ![Product Name Screen Shot][product-screenshot]
-The 3D metaverse game provides a virtual environment where people can connect and interact with each other from anywhere in the world. This game offers a unique and engaging way for people to socialize and connect with others in a digital and immersive format.
 
-The virtual economy in the game allows players to buy, sell, and trade virtual items using blockchain technology, creating a secure and transparent marketplace for players to engage in virtual commerce.
+The project is a response to the lack of engaging content and complicated setup processes in many existing metaverse games. To address these issues, the game offers a seamless and user-friendly experience that allows players to explore and interact with other users in a safe and secure virtual environment. The use of Solana account abstraction streamlines the login process, enabling users to easily sign in using their Google, Twitter, or wallet accounts.
 
-Overall, the game offers a fun and interactive way for people to connect with others and participate in a virtual economy, all while providing a safe and secure environment.
+One of the game's unique features is the ability for users to build their own mini-games on top of the platform. This empowers users to express their creativity and bring their own ideas to life, making the experience more personalized and engaging. By providing a platform for developers to create and publish their own games, the project can attract a wide range of users with different interests, thus expanding the game's reach and appeal.
+
+The game also features a virtual economy that leverages blockchain technology to create a secure and transparent marketplace for players to buy, sell, and trade virtual items. This includes NFT clothes that can be equipped to customize the appearance of their avatars, adding another layer of personalization and creativity to the game. By utilizing blockchain technology, the game ensures the authenticity and scarcity of these virtual items, providing a new and exciting way for users to engage with the virtual economy.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 ### Built With
 
 * Unity
 * C#
-* Flow Unity SDK
-* Flow Blockchain
+* Solana Blockchain
+* Solana Unity SDK
+* Node.js
+* Figma
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -106,7 +82,7 @@ Overall, the game offers a fun and interactive way for people to connect with ot
 You need the following software to run this project:
 * Unity 2020.3.0f1
 * Visual Studio 2019
-* Flow CLI
+* 
 
 ### Installation
 
@@ -133,10 +109,11 @@ You need the following software to run this project:
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Better NFT Contract Implementation
-- [ ] Major UI Overhaul
+- [ ] Implement more multiplayer games and features
+- [ ] Build a more developer friendly ecosystem
+- [ ] Improving the UI and UX significantly
 
-See the [open issues](https://github.com/CommanderAstern/Flowtopia/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/CommanderAstern/Bitbuild/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -166,7 +143,11 @@ Don't forget to give the project a star! Thanks again!
 
 Asim Jawahir - [@AsimJawahir](https://twitter.com/AsimJawahir) - asimjawahir123@gmail.com
 
-Project Link: [https://github.com/CommanderAstern/Flowtopia](https://github.com/CommanderAstern/Flowtopia)
+Rahul Pujari - [@RahulPujari](https://twitter.com/therahulpujari) - rahulpujari2919@gmail.com
+
+Pratik Jallan - [@PratikJallan](https://www.linkedin.com/in/pratik-jallan/) - pratikjalan11@gmail.com
+
+Project Link: [https://github.com/CommanderAstern/Bitbuild](https://github.com/CommanderAstern/Bitbuild)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -182,19 +163,19 @@ Project Link: [https://github.com/CommanderAstern/Flowtopia](https://github.com/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/CommanderAstern/Flowtopia.svg?style=for-the-badge
-[contributors-url]: https://github.com/CommanderAstern/Flowtopia/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/CommanderAstern/Flowtopia.svg?style=for-the-badge
-[forks-url]: https://github.com/CommanderAstern/Flowtopia/network/members
-[stars-shield]: https://img.shields.io/github/stars/CommanderAstern/Flowtopia.svg?style=for-the-badge
-[stars-url]: https://github.com/CommanderAstern/Flowtopia/stargazers
-[issues-shield]: https://img.shields.io/github/issues/CommanderAstern/Flowtopia.svg?style=for-the-badge
-[issues-url]: https://github.com/CommanderAstern/Flowtopia/issues
-[license-shield]: https://img.shields.io/github/license/CommanderAstern/Flowtopia.svg?style=for-the-badge
-[license-url]: https://github.com/CommanderAstern/Flowtopia/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/CommanderAstern/Bitbuild.svg?style=for-the-badge
+[contributors-url]: https://github.com/CommanderAstern/Bitbuild/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/CommanderAstern/Bitbuild.svg?style=for-the-badge
+[forks-url]: https://github.com/CommanderAstern/Bitbuild/network/members
+[stars-shield]: https://img.shields.io/github/stars/CommanderAstern/Bitbuild.svg?style=for-the-badge
+[stars-url]: https://github.com/CommanderAstern/Bitbuild/stargazers
+[issues-shield]: https://img.shields.io/github/issues/CommanderAstern/Bitbuild.svg?style=for-the-badge
+[issues-url]: https://github.com/CommanderAstern/Bitbuild/issues
+[license-shield]: https://img.shields.io/github/license/CommanderAstern/Bitbuild.svg?style=for-the-badge
+[license-url]: https://github.com/CommanderAstern/Bitbuild/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/asimjawahir
-[product-screenshot]: ./images/FlowTopia.png
+[product-screenshot]: ./images/Bitbuild.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
