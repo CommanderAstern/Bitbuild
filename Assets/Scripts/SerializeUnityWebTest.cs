@@ -76,7 +76,7 @@ public class SerializeUnityWebTest : NetworkBehaviour
     {
         if(isLocalPlayer)
         {
-            StartCoroutine(GetRequest("http://3.108.191.161:3000/getOwnedNFT?ownerAddress="+address));
+            StartCoroutine(GetRequest("http://3.110.83.239:3000/getOwnedNFT?ownerAddress="+address));
         }
     }
     // Update is called once per frame
