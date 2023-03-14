@@ -2434,7 +2434,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Server
+  m_text: Join The Main Server
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b4cd326bfb7b966428a75f6ec83be8d0, type: 2}
   m_sharedMaterial: {fileID: -3753371657342145856, guid: b4cd326bfb7b966428a75f6ec83be8d0,
@@ -6107,6 +6107,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Animated PBR Chest _Wood_Demo
+      objectReference: {fileID: 0}
+    - target: {fileID: 7824278254870210299, guid: 824c76252b7d53c49bcc5e11360d3846,
+        type: 3}
+      propertyPath: m_text
+      value: Press E to get NFT (0.02 BBT)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 824c76252b7d53c49bcc5e11360d3846, type: 3}

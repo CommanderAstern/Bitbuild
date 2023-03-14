@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using Solana.Unity.SDK;
 using Mirror;
 
 public class SerializeUnityWebTest : NetworkBehaviour
@@ -77,6 +78,13 @@ public class SerializeUnityWebTest : NetworkBehaviour
         if(isLocalPlayer)
         {
             StartCoroutine(GetRequest("http://3.110.83.239:3000/getOwnedNFT?ownerAddress="+address));
+        }
+    }
+    public void fetchNFTofSelf()
+    {
+        if(isLocalPlayer)
+        {
+            StartCoroutine(GetRequest("http://3.110.83.239:3000/getOwnedNFT?ownerAddress="+Web3.Instance.Wallet.Account.PublicKey.ToString()));
         }
     }
     // Update is called once per frame
