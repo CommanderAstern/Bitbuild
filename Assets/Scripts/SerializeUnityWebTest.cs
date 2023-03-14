@@ -100,7 +100,6 @@ public class SerializeUnityWebTest : NetworkBehaviour
                 string jsonString = webRequest.downloadHandler.text;
                 jsonString = fixJson(jsonString);
                 BitbuildNFT[] nfts = JsonHelper.FromJson<BitbuildNFT>(jsonString);
-                Debug.Log(nfts[0].name); // Output: "Metal Pant V3"
 
                 InventoryManager.NFTData nftData = new InventoryManager.NFTData();
                 foreach (var nft in nfts)
@@ -110,8 +109,6 @@ public class SerializeUnityWebTest : NetworkBehaviour
                     StartCoroutine(GetSprite(nft.image, nft.name, id));
                 }
 
-
-                nftData.name = nfts[0].name;
                 InventoryManager.Instance.Add(nftData);
                 InventoryManager.Instance.ListItems();
                 Debug.Log(nfts[1].attributes[0].value); // Output: "This is the wearable NFT for the Bitbuild game. This is a wearable RHand. Item 22/24"
