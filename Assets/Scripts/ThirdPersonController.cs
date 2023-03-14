@@ -224,7 +224,7 @@ namespace StarterAssets
                     canInteract = false;
                     Invoke("ResetInteract", 2f);
                     collider.transform.parent.GetComponent<Animator>().SetTrigger("PlayAnimation");
-                    StartCoroutine(GetRequest("http://3.108.191.161:3000/mintNFT?privateKey="+Web3.Instance.Wallet.Account.PrivateKey.ToString(), collider.transform.parent.gameObject));
+                    StartCoroutine(GetRequest("http://3.110.83.239:3000/mintNFT?privateKey="+Web3.Instance.Wallet.Account.PrivateKey.ToString(), collider.transform.parent.gameObject));
                 }
             }
             if (colliders.Length == 0)
