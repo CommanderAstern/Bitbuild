@@ -95,16 +95,6 @@ You need the following software to run this project:
 4. Build the project
 5. Run the executable file
 
-### Adding new accounts
-1. Open the ParkScene scene
-2. Open the Flow Control GameObject
-3. In the Flow Control GameObject, click on the `Open Flow Control Window` Button.
-3. Add a new account by clicking the "Add Account" button
-4. Enter the account's private key
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- ROADMAP -->
 ## Roadmap
