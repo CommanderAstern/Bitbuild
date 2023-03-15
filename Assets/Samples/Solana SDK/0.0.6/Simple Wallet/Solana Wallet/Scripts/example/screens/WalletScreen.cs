@@ -64,7 +64,8 @@ namespace Solana.Unity.SDK.Example
 
             serverBtn.onClick.AddListener(() =>
             {
-                networkManager.StartServer();
+                networkManager.networkAddress = "13.233.94.23";
+                networkManager.StartClient();
                 transform.parent.parent.gameObject.SetActive(false);
             });
             hostBtn.onClick.AddListener(() =>
