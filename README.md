@@ -72,6 +72,9 @@ The game also features a virtual economy that leverages blockchain technology to
 * Node.js
 * Figma
 
+### High Level Overview of Project
+<img src="./images/tempAsas.drawio.png" alt="Logo">
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
